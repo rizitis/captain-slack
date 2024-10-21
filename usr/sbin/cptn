@@ -1,0 +1,64 @@
+#!/bin/bash
+
+
+if [ "$EUID" -ne 0 ]; then
+    echo "Please run cptn as root!"
+    exit 1
+fi
+
+. /etc/captain-slack/cptn.conf
+
+# Συνάρτηση για να εκτελεί εντολές
+execute_command() {
+    echo "Executing: $1"
+    eval "$1"
+}
+
+# Έλεγχος αν τουλάχιστον μία επιλογή έχει δοθεί
+if [ "$#" -lt 1 ]; then
+    echo "Usage: $0 -i <package> | -b <backup_file> | -s <info>"
+    exit 1
+fi
+
+# Διαχείριση επιλογών
+while getopts "ib:s:" opt; do
+    case ${opt} in
+        i )
+            package="$OPTARG"
+            echo "Installing package: $package"
+            # Εκτέλεση εντολής εγκατάστασης (προσαρμόστε την εντολή όπως χρειάζεται)
+            execute_command "python  $package"
+            ;;
+        b )
+            backup_file="$OPTARG"
+            echo "Creating backup: $backup_file"
+            # Εκτέλεση εντολής backup (προσαρμόστε την εντολή όπως χρειάζεται)
+            execute_command "tar -czf $backup_file /path/to/files"
+            ;;
+        s )
+            info="$OPTARG"
+            echo "Showing info for: $info"
+            # Εκτέλεση εντολής για εμφάνιση πληροφοριών (προσαρμόστε την εντολή όπως χρειάζεται)
+            execute_command "echo 'Information for: $info'"
+            ;;
+        \? )
+            echo "Invalid option: $OPTARG"
+            exit 1
+            ;;
+        : )
+            echo "Invalid option: $OPTARG requires an argument"
+            exit 1
+            ;;
+    esac
+done
+
+shift $((OPTIND -1))
+
+# Έλεγξε αν υπάρχουν επιπλέον ορίσματα
+if [ "$#" -gt 0 ]; then
+   # echo "Additional arguments: $@"
+    # Εκτέλεση εντολών για τα επιπλέον ορίσματα
+    for arg in "$@"; do
+        execute_command "echo 'Processing argument: $arg'"
+    done
+fi

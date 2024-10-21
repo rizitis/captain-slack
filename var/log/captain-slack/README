@@ -1,0 +1,14 @@
+LOG FILES
+[error]
+0="First time install.Its not error but check /var/log/captain-slack/0.log"
+1="cptn setup script failed. Check /var/log/captain-slack/1.log"
+2="Check /var/log/captain-slack/2.log"
+3="Check /var/log/captain-slack/3.log"
+4="Check /var/log/captain-slack/4.log"
+5="Check /var/log/captain-slack/5.log"
+6="Check /var/log/captain-slack/6.log"
+7="Check /var/log/captain-slack/7.log"
+8="Check /var/log/captain-slack/8.log"
+9="Check /var/log/captain-slack/9.log"
+10="Check /var/log/captain-slack/10.log"
+100="Actually this is not an error. Everything look OK!"
