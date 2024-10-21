@@ -1,9 +1,13 @@
-# Dependencies
-.psci_modules
-.spago
-bower_components
-node_modules
-
-# Generated files
-.psci
-output
+core
+*.tgz
+*.txz
+*.tlz
+*.tar
+*.gz
+*.tar.gz
+*.tar.xz
+*output*
+tmp.*
+xauth*
+systemsettings*
+*.ICE-unix*
