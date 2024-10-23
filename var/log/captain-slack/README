@@ -9,6 +9,4 @@ LOG FILES
 6="Check /var/log/captain-slack/6.log"
 7="Check /var/log/captain-slack/7.log"
 8="Check /var/log/captain-slack/8.log"
-9="Check /var/log/captain-slack/9.log"
-10="Check /var/log/captain-slack/10.log"
-100="Actually this is not an error. Everything look OK!"
+9="Actually this is not an error. Everything look OK!"

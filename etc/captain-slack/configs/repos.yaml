@@ -1,0 +1,238 @@
+# [WELCOME]
+# This is the repository conf file for all repos except system which also has one more file in /etc/. 
+# For system (Official distro packages) all important keys are stored in /etc/captain-slack/system-repo.env
+# To enable it you must edit it "SYSTEM_REPO=ON" and here ONLY change 'priority: x' to something higher than 0 (zero)
+
+# [NOTE]
+# Every repo here has by default "priority: 0" 
+# that means all repos are disabled. Higher priority means higher priority against other repos also. (similar to slackpkg+)
+
+# NOTE, that since by default ALL repos has "priority: 0", this way you install Captain-Slack as non package manager 
+# and use it only for it's tool collection.
+
+# [SETTINGS] 
+# "type: web" {means repo url is http(s)--> so cptn use wget for download files
+# "type: git" {means repo url is git--> cptn use git to sync
+# "type2: bin" {means repo provide binaries *.t?z}
+# "type2: build" {means repo provide SlackBuilds}
+#
+# pkg_structure: {notag,normal,build_version} 
+# 1. "notag" means that package dont use _tag in its name (official packages) foo-1.2.0-x86_64-1.txz
+# 2. "normal" means _tag like _SBo _gfs etc...................................foo-1.2.0-x86_64-1_SBo.txz
+# 3. "build_version" means how alienBOB or conraid building their packages....foo-1.2.0-x86_64-1alien.txz
+#   - They do use tag but not _ (underscore).
+
+
+resources:
+  repositories:
+    - repository: system # repo name. I named "system" because every Slackware release, is an ALL in ONE  working system ;)
+      type: web # means http(s)--> wget
+      type2: bin # repo provide binaries
+      description: "Official Slackware Repository"
+      maintainers:
+        - name: Patrick Volkerding # I think he is the founder of Slackware :D
+          email: volkerdi@slackware.com # I need one separate yaml file to include all valid email addresses :D
+      arch: 
+       - x86 
+       - x86_64      
+      pkg_structure: notag # that means it not using _tags on binaries names. 
+      comments: "System repo by default is OFF. To enable it change priority !=0 and edit /etc/system.env SYSTEM_REPO=ON" 
+      priority: 0  # IF you enable system repo change priority value here, (0 = disabled)
+
+    - repository: system
+      type: web
+      type2: bin
+      description: "Official aarch64 Repository"
+      maintainers:
+        - name: Stuart Winter 
+          email: mozes@slackware.com
+      arch: 
+       - aarch64
+      pkg_structure: notag 
+      comments: "System repo by default is OFF. To enable it change priority !=0 and edit /etc/system.env SYSTEM_REPO=ON" 
+      priority: 0    
+    
+    - repository: SBo
+      VERSION_CODENAME: stable # Slackware-stable
+      type: git # git repo --> git clone
+      type2: build # provide SlackBuilds
+      url: https://github.com/SlackBuildsOrg/slackbuilds.git # repo url
+      branch: master
+      description: "SlackBuilds.org"
+      tags:
+        - SBo
+      maintainers:
+        - name: community
+          email: mailman@slackbuilds.org
+      comments:
+      priority: 0  
+    - repository: ponce
+      VERSION_CODENAME: current # Slackware-current
+      type: git
+      type2: build 
+      url: https://github.com/Ponce/slackbuilds.git
+      branch: current
+      description: "Unofficial fork of master branch from SlackBuilds.org for Slackware-current"
+      tags:
+        - SBo
+      maintainers:
+        - name: Matteo Bernardini
+          email: matteo.bernardini@gmail.com
+        - name: community
+      comments:
+      priority: 0  
+
+    - repository: gnome
+      VERSION_CODENAME: current
+      type: web
+      type2: bin
+      url: "https://reddoglinux.ddns.net/linux/gnome/"
+      branch: "46.x/"
+      description: "Repository for Gnome DE"
+      tags:
+        - gfs
+      maintainers:
+        - name: Nathaniel Russell
+          email: naterussell83@gmail.com
+      arch:
+        - x86_64
+      pkg_structure:  normal # that means it use _tag
+      comments:
+      priority: 0  
+    - repository: cosmic
+      VERSION_CODENAME: current
+      type: web
+      type2: bin
+      url: "https://reddoglinux.ddns.net/linux/"
+      branch: cosmic/
+      description: "Repository for Cosmic DE"
+      tags:
+        - cosmic
+      maintainers:
+        - name: Nathaniel Russell
+          email: naterussell83@gmail.com
+      arch:
+        - x86_64
+      pkg_structure: normal
+      comments: 
+      priority: 0  
+    - repository: kde6
+      VERSION_CODENAME: current
+      type: web
+      type2: bin
+      url: "https://slackware.lngn.net/pub/"
+      branch:
+       - x86_64/slackware64-current/kde6/
+       - aarch64/slackwareaarch64-current/kde6/
+      description: "Repository for Plasma 6 DE"
+      tags:
+        - KDE6
+      maintainers:
+        - name: Jay Lanagan
+          email: j@lngn.net
+      arch:
+        - x86_64 
+        - aarch64 
+      pkg_structure: normal
+      comments:
+      priority: 0  
+    - repository: nwg-shell
+      VERSION_CODENAME: current
+      type: web
+      type2: bin
+      url: "https://slackware.lngn.net/pub/"
+      branch:
+        - x86_64/slackware64-current/nwg-shell/
+        - aarch64/slackwareaarch64-current/nwg-shell/ 
+      description: "Repository for nwg-shell (hyprland, Sway, & misc)"
+      tags:
+        - nwg
+      maintainers:
+        - name: Jay Lanagan
+          email: j@lngn.net
+      arch:
+        - x86_64 
+        - aarch64 
+      pkg_structure: normal
+      comments:
+      priority: 0 
+
+    - repository: conraid
+      VERSION_CODENAME: current
+      type: web
+      type2: bin
+      url: "https://slackers.it/repository/slackware64-current/"
+      branch: 
+      description: "Slackware Current Repository by Conraid"
+      tags:
+        - cf
+      maintainers:
+        - name: Corrado Franco
+          email: slackers.it@gmail.com
+      arch:
+        - x86_64
+      pkg_structure: build_version # that means it do use tag but like alienbob no underscore _ used.
+      comments:
+      priority: 0
+
+    - repository: multilib
+      type: web
+      type2: bin
+      url: "https://slackware.nl/people/alien/multilib/"
+      branch:
+        - 15.0/
+        - current/
+      description: "Slackware for x86_64 - multilib packages"
+      tags:
+        - alien
+      maintainers:
+        - name: Eric Hameleers
+          email: alien@slackware.com
+      arch:
+        - x86_64
+      pkg_structure: build_version
+      comments:
+      priority: 0  
+    - repository: restricted
+      type: web
+      type2: bin
+      url: "https://slackware.nl/people/alien/restricted_sbrepos/"
+      branch: 15.0/x86/
+      branch: 15.0/x86_64/
+      branch: current/x86/
+      branch: current/x86_64/
+      description: "Slackware restricted_sbrepos"
+      tags:
+        - alien
+      maintainers:
+        - name: Eric Hameleers
+          email: alien@slackware.com
+      arch:
+        - x86
+        - x86_64
+      pkg_structure: build_version
+      comments:
+      priority: 0
+
+    - repository: sbrepos
+      type: web
+      type2: bin
+      url: "https://slackware.nl/people/alien/sbrepos/"
+      branch: 15.0/x86/
+      branch: 15.0/x86_64/
+      branch: current/x86/
+      branch: current/x86_64/
+      description: "Slackware alien sbrepos"
+      tags:
+        - alien
+      maintainers:
+        - name: Eric Hameleers
+          email: alien@slackware.com
+      arch:
+        - x86
+        - x86_64
+      pkg_structure: build_version
+      comments:
+      priority: 0
+
+

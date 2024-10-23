@@ -6,6 +6,12 @@ if [ $# -ne 1 ]; then
     exit 1
 fi
 
+# Initialize variables to find the fastest mirror
+#fastest_mirror=""
+#fastest_time=999999
+
+
+declare -A mirror_times
 # List of rsync mirrors
 mirrors=(
     "rsync://slackware.zero.com.ar/slackware/"
@@ -105,37 +111,48 @@ mirrors=(
     "rsync://ftp.is.co.za/IS-Mirror/ftp.slackware.com/pub/"
     "rsync://ftp.wa.co.za/pub/slackware/"
     "rsync://mirror.ac.za/slackware/"
+    "https://repo.ukdw.ac.id/slackware/"
 )
-
-# Initialize variables to find the fastest mirror
-fastest_mirror=""
-fastest_time=999999
 
 # Loop through mirrors and ping each one
 for mirror in "${mirrors[@]}"; do
-    # Ping the mirror and get the average response time
-    ping_time=$(ping -c 1 -W 1 "${mirror#rsync://}" | grep 'time=' | awk -F 'time=' '{print $2}' | awk '{print $1}')
+    # Extract the hostname (remove protocol and path)
+    hostname=$(echo "$mirror" | awk -F'/' '{print $3}')
+    
+    # Ping the mirror hostname and get the average response time
+    ping_time=$(ping -c 1 -W 1 "$hostname" | grep 'time=' | awk -F 'time=' '{print $2}' | awk '{print $1}')
     
     # If the ping was successful and we got a valid time
     if [[ -n "$ping_time" ]]; then
-        echo "Pinged $mirror: $ping_time ms"
-
-        # Check if this is the fastest mirror so far
-        if (( $(echo "$ping_time < $fastest_time" | bc -l) )); then
-            fastest_time="$ping_time"
-            fastest_mirror="$mirror"
-        fi
+        echo "Pinged $hostname: $ping_time ms"
+        # Store the mirror and its ping time in the associative array
+        mirror_times["$mirror"]="$ping_time"
     else
-        echo "Failed to ping $mirror"
+        echo "Failed to ping $hostname"
     fi
 done
 
-echo "Fastest mirror: $fastest_mirror with a time of $fastest_time ms"
+# Check if any mirrors responded
+if [ ${#mirror_times[@]} -eq 0 ]; then
+    echo "No mirrors responded."
+    exit 1
+fi
+
+# Sort the mirrors by their ping times and print the top 3
+echo "Top 3 fastest mirrors:"
+for mirror in "${!mirror_times[@]}" ; do
+    echo "$mirror ${mirror_times[$mirror]}"
+done | sort -k2 -n | head -n 3
+
+
+echo "test......over"
+exit
 
 # Change to the specified directory
 cd "$1" || { echo "Failed to change directory to $1"; exit 1; }
 
 # Perform rsync with the fastest mirror found
+# shellcheck disable=SC2154
 if rsync --delete -rlptDvz "$fastest_mirror/slackware-$1" .; then
     echo "Successfully synced with $fastest_mirror"
 else

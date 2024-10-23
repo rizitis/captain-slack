@@ -1,0 +1,7 @@
+mirrors=(
+"https://slackware.uk/slackwarearm/slackwareaarch64-current/"
+"https://ftp.halifax.rwth-aachen.de/slackwarearm/slackwareaarch64-current/"
+"https://ftp.slackware.pl/pub/slackwarearm/slackwareaarch64-current/"
+"https://mirror.slackbuilds.org/slackwarearm/slackwareaarch64-current/"
+"https://slackware.absolutehosting.net/pub/slackwarearm/slackwareaarch64-current/"
+)
