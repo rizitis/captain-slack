@@ -1,3 +1,24 @@
+Captain Slack lives in slackware systems. He wanders in the paths of / and has no dependence at all.<br> He's an old-school kid but an eternal teenager. It is still not completely known when he was born,<br> and unknown when he will die. He knows a lot about the system he lives in and wants to tell you.<br> Rumor has it that it finds fast servers from the mirrorlist, scans the system and displays all packages in groups, searches the paths inhabited by libraries and reveals their hidden relationships... <br> Others said he creates his own databases which he shares with you and someone said he has a hidden activity that he does not reveal but is real. <br> Manages packages, talks to all remote repositories as normal! He puts them in order of priority and much more, but only if you ask him to.  <br>
+Once when I asked him:<br>
+- why?<br>
+- Because we don't need one more Slackware package manager!<br>
+
+What i can tell for sure is that, he is shy and does not take initiatives on his own!<br>
+His code is an compinations of bash and python scripts. Database and config<br> file are ini and yaml! Very strange compinations! <br>  
+  
+ When I asked again:<br>
+ - why?<br>
+ with a sweet and sly look at the same time he told me: <br>
+  - Because I can!<br>
+ 
+I kept quiet, and so did he...<br>
+I took a couple of breaths and bravely asked again:<br>
+- In what architecture does anyone find you?<br>
+He started laughing out loud! And he answered<br>
+- btw : I dont use Arch , <br>
+- But you'll find me wherever Slack lives x86{_64} aarch64 <br>
+
+
 [Directories]<br>
 ```
 APP_EXEC = /usr/sbin/cptn                   ; Captain-Slack Executable
