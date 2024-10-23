@@ -45,9 +45,9 @@ for package in /var/lib/pkgtools/packages/*; do
         # Determine the output filename
         if [[ -n $tag ]]; then
             tag_file_name="${tag//_/}" # Remove underscores from the tag for the filename
-            echo "${app_name}" >> "$output_dir/${tag_file_name}.txt" # Output only the package name
+            echo "${app_name}=_$tag" >> "$output_dir/${tag_file_name}.txt"
         else
-            echo "${app_name}" >> "$output_dir/system.txt" # No '=' sign, just the package name
+            echo "${app_name}=" >> "$output_dir/system.txt"
         fi
 
     elif [ "$num_parts" -eq 3 ]; then
@@ -57,8 +57,8 @@ for package in /var/lib/pkgtools/packages/*; do
         arch="${parts[2]}"
         build_version="1"  # Default build version if not provided
 
-        # Output to system.txt for no tag, without '='
-        echo "${app_name}" >> "$output_dir/system.txt"
+        # Output to system.txt for no tag
+        echo "${app_name}=" >> "$output_dir/system.txt"
 
     else
         # Handle unexpected format
