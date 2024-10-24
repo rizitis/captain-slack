@@ -18,6 +18,12 @@ He started laughing out loud! And he answered<br>
 - btw : I dont use Arch , <br>
 - But you'll find me wherever Slack lives x86{_64} aarch64 <br>
 
+Kastor:<br>
+It comes from the Greek name ‘Kastor’ that originates from the Old Greek word ‘kekasmai’ meaning ‘to excel’ or ‘to shine.’
+
+Isla:<br>
+It is the Spanish word for ‘island.’ The name ‘Isla’ could also be a derivative of ‘Islay,’ an island off the west coast of Scotland.
+
 
 [Directories]<br>
 ```

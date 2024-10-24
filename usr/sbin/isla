@@ -1,0 +1,241 @@
+#!/bin/bash
+
+# This is Captain Slack 
+# Born in: https://github.com/rizitis/captain-slack 20/10/2024 from Human Brain
+# 
+# This is free and unencumbered software released into the public domain.
+
+# Anyone is free to copy, modify, publish, use, compile, sell, or
+# distribute this software, either in source code form or as a compiled
+# binary, for any purpose, commercial or non-commercial, and by any
+# means.
+
+# In jurisdictions that recognize copyright laws, the author or authors
+# of this software dedicate any and all copyright interest in the
+# software to the public domain. We make this dedication for the benefit
+# of the public at large and to the detriment of our heirs and
+# successors. We intend this dedication to be an overt act of
+# relinquishment in perpetuity of all present and future rights to this
+# software under copyright law.
+
+# THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND,
+# EXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF
+# MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT.
+# IN NO EVENT SHALL THE AUTHORS BE LIABLE FOR ANY CLAIM, DAMAGES OR
+# OTHER LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE,
+# ARISING FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR
+# OTHER DEALINGS IN THE SOFTWARE.
+
+# For more information, please refer to <https://unlicense.org>
+
+
+# thanks https://patorjk.com/software/taag/#p=display&c=fortran&w=%20&f=DiamFont&t=Captain%20Slack%20 #
+
+echo -e "\e[1;34m"
+cat << "EOF"
+
+
+!   ▗▄▄▖▗▞▀▜▌▄▄▄▄     ■  ▗▞▀▜▌▄ ▄▄▄▄       ▗▄▄▖█ ▗▞▀▜▌▗▞▀▘█  ▄     
+!  ▐▌   ▝▚▄▟▌█   █ ▗▄▟▙▄▖▝▚▄▟▌▄ █   █     ▐▌   █ ▝▚▄▟▌▝▚▄▖█▄▀      
+!  ▐▌        █▄▄▄▀   ▐▌       █ █   █      ▝▀▚▖█          █ ▀▄     
+!  ▝▚▄▄▖     █       ▐▌       █           ▗▄▄▞▘█          █  █     
+!            ▀       ▐▌                                            
+!                                                                  
+!                                                                  
+
+EOF
+echo -e "\e[0m"
+echo -e "${RESET}"
+
+# Check if the script is being run as root
+if [ "$EUID" -ne 0 ]; then
+    echo "Please run as root!"
+    exit 1
+fi
+
+# Try to source the configuration file ini and see if it works
+CONFIG_FILE=/etc/captain-slack/configs/cptn-map.ini
+
+# Parse the config file and export variables ;)
+function source_config() {
+    local section=""
+    while IFS="=" read -r key value; do
+        if [[ $key =~ ^\[(.*)\]$ ]]; then
+            section="${BASH_REMATCH[1]}"
+        elif [[ -n $key && -n $value && $key != ";"* && $section != "" ]]; then
+            key=$(echo "$key" | xargs)  # Trim whitespace
+            value=$(echo "$value" | xargs)  # Trim whitespace
+            value=$(eval echo "$value")  # Resolve variables like $APP_HOME
+            export "$key"="$value"  # Export as environment variable
+            #echo "$key = $value"  # Automatically echo the key-value pair for testing not need in real.. 
+        fi
+    done < "$CONFIG_FILE"
+}
+
+# Call the function to source the config
+source_config
+
+# Function to execute commands
+execute_command() {
+    echo "Executing: $1"
+    eval "$1"
+}
+
+# Check if at least one argument is provided
+if [ "$#" -lt 1 ]; then
+    echo "Usage: $0 <command> [<package>] [-a] [-b] [-v] [-1] [-2] ... [-9]"
+    echo "Commands: install, upgrade, upgrade-all, remove, reinstall, info, clean-system, dist-upgrade, install-new, error, new-config, check-updates,
+    show-changelog, remove, update, search, file-search, set-up, make-db, build"
+    exit 1
+fi
+
+
+# Main command (install, upgrade, remove, etc.)
+command="$1"
+
+# Shift to check if the second argument is a package or flag
+shift
+
+# Initialize variables for package and flags
+package=""
+flag_a=false
+flag_b=false
+verbose=false
+number_flag=""
+
+# Check if $command is not one of the invalid commands
+if [[ "$1" != -* && "$1" != "" && "$command" != "upgrade-all" && "$command" != "clean-system" && "$command" != "install-new" && "$command" != "dist-upgrade" && "$command" != "set-up" && "$command" != "make-db" ]]; then
+    package="$1"
+    shift
+fi
+
+# Parse optional flags: -a, -b, -v for non slack-package managers. I mean not needed for cptn exaclty but maybe in future... 
+while getopts "abv123456789" opt; do
+    case ${opt} in
+        a )
+            flag_a=true
+            ;;
+        b )
+            flag_b=true
+            ;;
+        v )
+            verbose=true
+            ;;
+        [1-9] )
+            number_flag=$opt
+            ;;
+        \? )
+            echo "Invalid option: -$OPTARG"
+            echo "Usage: $0 [-a] [-b] [-v] [-1] [-2] ... [-9]"
+            exit 1
+            ;;
+    esac
+done
+
+# Example flag behavior after parsing
+if [ "$flag_a" = true ]; then
+    echo "Flag -a is set."
+fi
+
+if [ "$flag_b" = true ]; then
+    echo "Flag -b is set."
+fi
+
+if [ "$verbose" = true ]; then
+    echo "Verbose mode enabled."
+fi
+
+if [ ! -z "$number_flag" ]; then
+    echo "Number flag -$number_flag is set."
+fi
+
+# Handle the main commands
+case "$command" in
+    install)
+        if [ -z "$package" ]; then
+            echo "Error: 'install' command requires a package"
+            exit 1
+        fi
+        echo "Installing package: $package"
+        # Custom installation command
+        if [ "$flag_a" = true ]; then
+            execute_command "your_install_command_here $package with_flag_a"
+        else
+            execute_command "your_install_command_here $package"
+        fi
+        ;;
+        
+    upgrade)
+        if [ -z "$package" ]; then
+            echo "Error: 'upgrade' command requires a package"
+            exit 1
+        fi
+        echo "Upgrading package: $package"
+        # Custom upgrade command
+        if [ "$flag_b" = true ]; then
+            execute_command "your_upgrade_command_here $package with_flag_b"
+        else
+            execute_command "your_upgrade_command_here $package"
+        fi
+        ;;
+        
+    upgrade-all)
+        echo "Upgrading all packages"
+        # Custom upgrade-all command
+        if [ "$flag_a" = true ]; then
+            execute_command "your_upgrade_all_command_here with_flag_a"
+        else
+            execute_command "your_upgrade_all_command_here"
+        fi
+        ;;
+        
+    remove)
+        if [ -z "$package" ]; then
+            echo "Error: 'remove' command requires a package"
+            exit 1
+        fi
+        echo "Removing package: $package"
+        # Custom remove command
+        execute_command "your_remove_command_here $package"
+        ;;
+        
+    reinstall)
+        if [ -z "$package" ]; then
+            echo "Error: 'reinstall' command requires a package"
+            exit 1
+        fi
+        echo "Reinstalling package: $package"
+        # Custom reinstall command
+        execute_command "your_reinstall_command_here $package"
+        ;;
+        
+    info)
+        if [ -n "$package" ]; then
+            echo "Showing info for package: $package"
+            # Custom info command for package
+            execute_command "your_info_command_here $package"
+        else
+            echo "Showing system info"
+            # Custom system-wide info command
+            execute_command "your_system_info_command_here"
+        fi
+        ;;
+        
+    clean-system)
+        echo "Cleaning the system"
+        # Custom clean-system command
+        if [ "$flag_a" = true ]; then
+            execute_command "your_clean_command_here with_flag_a"
+        else
+            execute_command "your_clean_command_here"
+        fi
+        ;;
+        
+    *)
+        echo "Invalid command: $command"
+        echo "Usage: $0 <command> [<package>] [-a] [-b] [-v] [-1] [-2] ... [-9]"
+        echo "Commands: install, upgrade, upgrade-all, remove, reinstall, info, clean-system"
+        exit 1
+        ;;
+esac
+

@@ -1,5 +1,7 @@
 #!/bin/bash
 
+#!/bin/bash
+
 # This is Captain Slack 
 # Born in: https://github.com/rizitis/captain-slack 20/10/2024 from Human Brain
 # 
@@ -54,7 +56,7 @@ if [ "$EUID" -ne 0 ]; then
 fi
 
 # Try to source the configuration file ini and see if it works
-CONFIG_FILE=/home/omen/GITHUB/AUTO_SLACKBUILD/hacks/captain-slack/etc/captain-slack/configs/cptn-map.ini
+CONFIG_FILE=/etc/captain-slack/configs/cptn-map.ini
 
 # Parse the config file and export variables ;)
 function source_config() {
@@ -84,8 +86,7 @@ execute_command() {
 # Check if at least one argument is provided
 if [ "$#" -lt 1 ]; then
     echo "Usage: $0 <command> [<package>] [-a] [-b] [-v] [-1] [-2] ... [-9]"
-    echo "Commands: install, upgrade, upgrade-all, remove, reinstall, info, clean-system, dist-upgrade, install-new, error, new-config, check-updates,
-    show-changelog, remove, update, search, file-search, set-up, make-db, build"
+    echo "Commands:  error, make-db, build, check-mirrors, "
     exit 1
 fi
 

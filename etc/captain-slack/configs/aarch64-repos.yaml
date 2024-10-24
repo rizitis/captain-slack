@@ -1,0 +1,116 @@
+# [WELCOME]
+# This is the repository conf file for all repos except system which also has one more file in /etc/. 
+# For system (Official distro packages) all important keys are stored in /etc/captain-slack/system-repo.env
+# To enable it you must edit it "SYSTEM_REPO=ON" and here ONLY change 'priority: x' to something higher than 0 (zero)
+
+# [NOTE]
+# Every repo here has by default "priority: 0" 
+# that means all repos are disabled. Higher priority means higher priority against other repos also. (similar to slackpkg+)
+
+# NOTE, that since by default ALL repos has "priority: 0", this way you install Captain-Slack as non package manager 
+# and use it only for it's tool collection.
+
+# [SETTINGS] 
+# "type: web" {means repo url is http(s)--> so cptn use wget for download files
+# "type: git" {means repo url is git--> cptn use git to sync
+# "type2: bin" {means repo provide binaries *.t?z}
+# "type2: build" {means repo provide SlackBuilds}
+#
+# pkg_structure: {notag,normal,build_version} 
+# 1. "notag" means that package dont use _tag in its name (official packages) foo-1.2.0-x86_64-1.txz
+# 2. "normal" means _tag like _SBo _gfs etc...................................foo-1.2.0-x86_64-1_SBo.txz
+# 3. "build_version" means how alienBOB or conraid building their packages....foo-1.2.0-x86_64-1alien.txz
+#   - They do use tag but not _ (underscore).
+
+# [RULES]
+# 1. You cant have enabled ponce and SBo together, if you do it Captain-Slack will exit until you disable one of them.
+# 2. You cant set the same priority number for 2 different repositories. If so, Captain-Slack will exit until you fix it.
+
+resources:
+    - repository: system
+      type: web
+      type2: bin
+      url: "http://ftp.arm.slackware.com/slackwarearm/"
+      branch: slackwareaarch64-current/
+      description: "Official aarch64 Repository"
+      maintainers:
+        - name: Stuart Winter
+          email: mozes@slackware.com
+      arch: aarch64
+      pkg_structure: notag
+      comments: "System repo for aarch64 is OFF by default. Enable it in system.env."
+      priority: 0
+
+    - repository: gnome46
+      VERSION_CODENAME: current
+      type: web
+      type2: bin
+      url: "https://slackware.lngn.net/pub/"
+      arch: aarch64
+      branches:
+        - name: slackwareaarch64-current/
+          path: "gnome46/"
+      description: "Repository for Gnome DE"
+      maintainers:
+        - name: Jay Lanagan
+          email: j@lngn.net
+      pkg_structure: normal
+      tag: _lngn
+      comments: ""
+      priority: 0  
+
+    - repository: kde6
+      VERSION_CODENAME: current
+      type: web
+      type2: bin
+      url: "https://slackware.lngn.net/pub/"
+      arch: aarch64
+      branches:
+        - name: slackwareaarch64-current/
+          path: "kde6/"
+      description: "Repository for Plasma 6 DE"
+      maintainers:
+        - name: Jay Lanagan
+          email: j@lngn.net
+      pkg_structure: normal
+      tag: _KDE6
+      comments: ""
+      priority: 0  
+
+    - repository: nwg-shell
+      VERSION_CODENAME: current
+      type: web
+      type2: bin
+      url: "https://slackware.lngn.net/pub/"
+      arch: aarch64
+      branches:
+        - name: slackwareaarch64-current/
+          path: "nwg-shell/"
+      description: "Repository for nwg-shell (Hyprland, Sway & misc)"
+      maintainers:
+        - name: Jay Lanagan
+          email: j@lngn.net
+      pkg_structure: normal
+      tag: _nwg
+      comments: ""
+      priority: 0  
+
+    - repository: flatpak
+      VERSION_CODENAME: current
+      type: web
+      type2: bin
+      url: "https://slackware.lngn.net/pub/"
+          arch: aarch64
+      branches:
+        - name: slackwareaarch64-current/
+          path: "flatpak/"
+      description: "Repository for nwg-shell (Hyprland, Sway & misc)"
+      maintainers:
+        - name: Jay Lanagan
+          email: j@lngn.net
+      pkg_structure: normal
+      tag: _lngn
+      comments: ""
+      priority: 0  
+
+
