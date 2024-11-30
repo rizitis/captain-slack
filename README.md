@@ -38,9 +38,9 @@ As root `removepkg cptn`
 
 **services**
 
-4. `cptn service-status rc.service-name` (as root) Will print service status info
-5. `cptn restart-service`   (as root) Will print all rc.services and ask use to chose which need restart
-6. `cptn show-services` (as root) Will export in terminal all services and their status.
+4. `cptn serv-status rc.service-name` (as root) Will print service status info
+5. `cptn restart-serv`   (as root) Will print all rc.services and ask use to chose which need restart
+6. `cptn show-servs` (as root) Will export in terminal all services and their status.
 
 ---
 
