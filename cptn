@@ -55,11 +55,7 @@ EOF
 echo -e "\e[0m"
 echo -e "${RESET}"
 
-# Check if the script is being run as root
-if [ "$EUID" -ne 0 ]; then
-    echo "Please run as root!"
-    exit 1
-fi
+
 
 # Try to source the configuration file ini and see if it works
 CONFIG_FILE=/etc/captain-slack/cptn-main.ini
@@ -92,7 +88,7 @@ execute_command() {
 # Check if at least one argument is provided
 if [ "$#" -lt 1 ]; then
     echo "Usage: $0 <command> [<package>] [-a] [-b] [-v] [-1] [-2] ... [-9]"
-    echo "Commands: mirrors, show-servs, restart-serv, serv-status, make-db, info, weather-forcast"
+    echo "Commands: mirrors, show-servs, restart-serv, serv-status, make-db, info, weather-forcast, open-pkgs, open-libs"
     exit 1
 fi
 
@@ -113,7 +109,7 @@ flag_l=false
 number_flag=""
 fi
 # Check if $command is not one of the invalid commands
-if [[ "$1" != -* && "$1" != "" && "$command" != "mirrors" && "$command" != "show-servs" && "$command" != "restart-serv" && "$command" != "serv-status" && "$command" != "make-db" && "$command" != "info" && "$command" != "weather-forcast" ]]; then
+if [[ "$1" != -* && "$1" != "" && "$command" != "mirrors" && "$command" != "show-servs" && "$command" != "restart-serv" && "$command" != "serv-status" && "$command" != "make-db" && "$command" != "info" && "$command" != "weather-forcast" && "$command" != "open-pkgs" && "$command" != "open-libs" ]]; then
     package="$1"
     shift
 fi
@@ -174,6 +170,11 @@ case "$command" in
         ;;
 
     serv-status)
+    # Check if the script is being run as root
+if [ "$EUID" -ne 0 ]; then
+    echo "Please run as root!"
+    exit 1
+fi
         if [ -z "$package" ]; then
             echo "Error: 'serv-status' command requires a rc.serv_name"
             exit 1
@@ -182,6 +183,11 @@ case "$command" in
         ;;
 
     make-db)
+    # Check if the script is being run as root
+    if [ "$EUID" -ne 0 ]; then
+      echo "Please run as root!"
+      exit 1
+    fi
         echo "Creating DataBase"
         if [ "$flag_a" = true ]; then
         echo "Creating DataBase for all installed Libraries and Packages"
@@ -215,10 +221,20 @@ case "$command" in
         ;;
         
     restart-serv)
+    # Check if the script is being run as root
+    if [ "$EUID" -ne 0 ]; then
+    echo "Please run as root!"
+    exit 1
+    fi
         execute_command "bash $APP_SERV/restart-services.sh"
         ;;
         
     show-servs)
+    # Check if the script is being run as root
+    if [ "$EUID" -ne 0 ]; then
+    echo "Please run as root!"
+    exit 1
+    fi
         execute_command "bash $APP_SERV/rcstatus.sh"
         ;;
         
@@ -226,11 +242,19 @@ case "$command" in
         echo "Search for fast Slackware mirror"
             execute_command "bash $APP_SERV/show-mirrors.sh"
         ;;
+
+    open-libs)
+            execute_command "xdg-open $PKG_DB/libraries_dependencies.yaml"
+        ;;
+
+    open-pkgs)
+            execute_command "xdg-open $PKG_DB/packages.yaml"
+        ;;
         
     *)
         echo "Invalid command: $command"
         echo "Usage: $0 <command> [<package>] [-a] [-p] [-l] [-1] [-2] ... [-9]"
-        echo "Commands: mirrors, show-servs, restart-serv, serv-status, make-db, info, weather-forcast"
+        echo "Commands: mirrors, show-servs, restart-serv, serv-status, make-db, info, weather-forcast, open-pkgs, open-libs"
         exit 1
         ;;
 esac

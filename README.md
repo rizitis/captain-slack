@@ -27,9 +27,9 @@ As root `removepkg cptn`
 3. `cptn make-db -l` The same but only for libraries and their deps...
 
 **print infos**
-1. `cptn file-search package-name -p` print info for the package
-2. `cptn file-search package-name -l` the same for library
-3. `cptn file-search package-name` if not flag -(p,l) then search both packages and libs if found print then print info
+1. `cptn info package-name` print info for the package
+2. `cptn info package-name` the same if its a library
+3. `cptn open-libs` or `cptn open-pkgs` open with defauld text editor the yaml file for installed libraries or packages
 4. `cptn service-status rc.service-name` print service status info
 5. `cptn restart-service` print all rc.services and ask use to chose which need restart
 6. `cptn show-services` export in terminal all services and their status.
