@@ -11,3 +11,5 @@ tmp.*
 xauth*
 systemsettings*
 *.ICE-unix*
+*.swp
+*.qss
