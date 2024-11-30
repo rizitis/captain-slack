@@ -1,19 +1,24 @@
 # Captain-Slack (cptn)
 
-
+![Captain-Slack](./Captain-Slack.png)
 
 > We're living the future so the present is our past.
+
+---
 
 ## Install
 
 
 * Download source
 - As root ran `bash cptn.SlackBuild`
+* `upgradepkg --install-new /tmp/cptn*.tlz` 
 
 
 ### Uninstall
 
 As root `removepkg cptn`
+
+--- 
 
 #### Usage
 **create db**
@@ -30,3 +35,10 @@ As root `removepkg cptn`
 6. `cptn show-services` export in terminal all services and their status.
 7. `cptn find-mirror` check all active slackware mirrorlist servers and print the 3 faster for your location.
 8. `cptn weather-forcast` print in terminal next days weather forcast for you :D (assume you are not under vpn)
+
+---
+
+#### Videos:
+https://asciinema.org/a/5uULLvA12w3Yj69HrEqh9CNPK <br>
+https://asciinema.org/a/CBgyGtqAuDwLphHhnbZubQAzq
+

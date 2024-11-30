@@ -215,7 +215,7 @@ case "$command" in
         ;;
         
     restart-serv)
-        execute_command "bash $APP_SERV/restart-servs.sh"
+        execute_command "bash $APP_SERV/restart-services.sh"
         ;;
         
     show-servs)
