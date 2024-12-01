@@ -109,7 +109,7 @@ flag_l=false
 number_flag=""
 fi
 # Check if $command is not one of the invalid commands
-if [[ "$1" != -* && "$1" != "" && "$command" != "mirrors" && "$command" != "show-servs" && "$command" != "restart-serv" && "$command" != "serv-status" && "$command" != "make-db" && "$command" != "info" && "$command" != "weather-forcast" && "$command" != "open-pkgs" && "$command" != "open-libs" ]]; then
+if [[ "$1" != -* && "$1" != "" && "$command" != "mirrors" && "$command" != "show-servs" && "$command" != "restart-serv" && "$command" != "serv-status" && "$command" != "make-db" && "$command" != "info" && "$command" != "weather-forcast" && "$command" != "open-pkgs" && "$command" != "open-libs" && "$command" != "first-ran" ]]; then
     package="$1"
     shift
 fi
@@ -191,6 +191,7 @@ fi
         echo "Creating DataBase"
         if [ "$flag_a" = true ]; then
         echo "Creating DataBase for all installed Libraries and Packages"
+            execute_command "bash $APP_SERV/first-ran.sh"
             execute_command "bash $APP_SERV/export-installed.sh"
             execute_command "bash $APP_SERV/create_db.sh"
             execute_command "bash $APP_SERV/export-tags.sh"
@@ -200,6 +201,7 @@ fi
         elif
             [ "$flag_p" = true ]; then
         echo "Creating DataBase for all installed Packages"
+            execute_command "bash $APP_SERV/first-ran.sh"
             execute_command "bash $APP_SERV/export-installed.sh"
             execute_command "bash $APP_SERV/create_db.sh"
             execute_command "bash $APP_SERV/export-tags.sh"
@@ -207,6 +209,7 @@ fi
         elif
             [ "$flag_l" = true ]; then
         echo "Creating DataBase for all installed Libraries"
+            execute_command "bash $APP_SERV/first-ran.sh"
             execute_command "bash $APP_SERV/ldd-explorer.sh"
             execute_command "bash $APP_SERV/create_libs_yaml.sh"
         else
@@ -250,11 +253,15 @@ fi
     open-pkgs)
             execute_command "xdg-open $PKG_DB/packages.yaml"
         ;;
+
+    first-ran)
+            execute_command "bash $APP_SERV/first-ran.sh"
+        ;;
         
     *)
         echo "Invalid command: $command"
         echo "Usage: $0 <command> [<package>] [-a] [-p] [-l] [-1] [-2] ... [-9]"
-        echo "Commands: mirrors, show-servs, restart-serv, serv-status, make-db, info, weather-forcast, open-pkgs, open-libs"
+        echo "Commands: mirrors, show-servs, restart-serv, serv-status, make-db, info, weather-forcast, open-pkgs, open-libs, first-ran"
         exit 1
         ;;
 esac
