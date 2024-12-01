@@ -9,10 +9,17 @@
 ## Install
 
 - required:`yq` and `jq`, from SBo
-* Download source
-- As root ran `bash cptn.SlackBuild`
-* `upgradepkg --install-new /tmp/cptn*.tlz` 
+* Download source.tar.gz from release or from branches.
+- extract tarball and change in folder.
+* As root ran `bash cptn.SlackBuild`
+- Finally `upgradepkg --install-new /tmp/cptn*.tlz`
 
+Alternative method (unstable):
+1. `git clone https://github.com/rizitis/captain-slack.git`
+2. `cd captain-slack && sudo bash cptn.SlackBuild`
+3. `sudo upgradepkg --install-new /tmp/cptn*.tlz`
+4. `sudo rm /tmp/cptn*.tlz`
+ 
 
 ### Uninstall
 
