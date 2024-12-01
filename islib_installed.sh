@@ -36,20 +36,23 @@ yaml_file="$PKG_DB"/libraries_dependencies.yaml
 # Flag to check if we are inside a matching block
 inside_block=false
 
+echo "Libraries:"
+
 # Read the YAML file line by line
 while IFS= read -r line; do
 
     # Check if the line contains the library name before ".so"
     if [[ $line =~ -\ name:.*$library_name.*\.so ]]; then
         # Print the matching line (library)
-        echo "$line"
-        inside_block=true
+        echo "$line" | yq
+        inside_block=false
     elif [[ $line =~ -\ name: ]] && [[ $inside_block == true ]]; then
         # If we encounter a new `- name:` line and we are inside the block, stop
         break
     elif [[ $inside_block == true ]]; then
         # Print dependencies while inside the block
-        echo "$line"
+        echo "$line" | yq
     fi
 
 done < "$yaml_file"
+echo ""

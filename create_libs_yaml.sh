@@ -52,3 +52,5 @@ echo -e "$output" > "$output_file"
 
 # Optional: Print a message indicating where the output is saved
 echo "Output written to '$output_file'"
+
+sed  -i 's/\t/ /g' "$output_file"

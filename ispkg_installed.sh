@@ -33,12 +33,12 @@ search_package() {
     result=$(yq eval ".[] | select(.package == \"$package_name\")" "$yaml_file")
 
     # Debugging: print the result of the search
-    echo "Search result: $result"
+#    echo "Search result: $result"
 
     # Check if result is empty
     if [[ -n "$result" ]]; then
         echo "Package found:"
-        echo "$result"
+        echo "$result" | yq
     else
         echo "Package '$package_name' not found."
     fi
