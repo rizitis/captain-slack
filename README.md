@@ -9,7 +9,7 @@
 ## Install
 
 - required:`yq` and `jq`, from SBo
-* Download source.tar.gz from release or from branches.
+* DO NOT Download source.tar.gz from release but from branches.
 - extract tarball and change in folder.
 * As root ran `bash cptn.SlackBuild`
 - Finally `upgradepkg --install-new /tmp/cptn*.tlz`
