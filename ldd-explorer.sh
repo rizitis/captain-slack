@@ -29,6 +29,7 @@ source_config
 # Output file
 ###output_file="$PKG_DB/library_dependencies.txt"
 output_file="$PKG_DB"/library_dependencies.txt
+mkdir -p "$PKG_DB" || exit 89
 touch "$output_file"
 echo "" > "$output_file"
 
