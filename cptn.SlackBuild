@@ -47,7 +47,7 @@ PKG=/tmp/package-"$PRGNAM"
 set -e
 rm -rf "$PKG"
 
-mkdir -p "$PKG"/usr/local/bin/captain-slack/ "$PKG"/etc/captain-slack "$PKG"/var/lib/captain-slack/mirror-db "$PKG"/var/log/captain-slack "$PKG"/usr/share/captain-slack
+mkdir -p "$PKG"/usr/local/bin/captain-slack/ "$PKG"/etc/captain-slack "$PKG"/var/lib/captain-slack/{mirror-db,system-db} "$PKG"/var/log/captain-slack "$PKG"/usr/share/captain-slack
 
 cd $PKG
 pushd $CWD
