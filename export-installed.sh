@@ -26,7 +26,8 @@ source_config
 output_file="$PKG_DB/installed_packages.txt"
 
 # Create or clear the output file
-> "$output_file"
+touch "$output_file"
+echo "" > "$output_file"
 
 # Loop through each installed package file in the specified directory
 for package in /var/lib/pkgtools/packages/*; do
