@@ -23,8 +23,8 @@ function source_config() {
 source_config
 
 # Output file
-output_file="$PKG_DB/installed_packages.txt"
-
+output_file="$PKG_DB"/"installed_packages.txt"
+mkdir -p "$PKG_DB" || exit 99
 # Create or clear the output file
 touch "$output_file"
 echo "" > "$output_file"
