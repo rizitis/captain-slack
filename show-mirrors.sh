@@ -123,10 +123,16 @@ echo ""
 echo ""
 # Sort the mirrors by their ping times and print the top 3
 echo "Top 5 fastest mirrors for your location:"
-
+if [ ! "$number_flag" ]; then
 for mirror in "${!mirror_times[@]}" ; do
     echo "$mirror ${mirror_times[$mirror]}"
 done | sort -k2 -n | head -n 5
+else
+for mirror in "${!mirror_times[@]}" ; do
+    echo "$mirror ${mirror_times[$mirror]}"
+done | sort -k2 -n | head -n "$number_flag"
+fi
+
 echo ""
 #echo "Captain-Slack: Ignore http://www.w3.org/* if it appears."
 

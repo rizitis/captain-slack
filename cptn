@@ -88,7 +88,7 @@ execute_command() {
 # Check if at least one argument is provided
 if [ "$#" -lt 1 ]; then
     echo "Usage: $0 <command> [<package>] [-a] [-b] [-v] [-1] [-2] ... [-9]"
-    echo "Commands: mirrors, show-servs, restart-serv, serv-status, make-db, info, weather-forcast, open-pkgs, open-libs"
+    echo "Commands: mirrors, show-servs, restart-serv, serv-status, make-db, info, weather, open-pkgs, open-libs"
     exit 1
 fi
 
@@ -109,7 +109,7 @@ flag_l=false
 number_flag=""
 fi
 # Check if $command is not one of the invalid commands
-if [[ "$1" != -* && "$1" != "" && "$command" != "mirrors" && "$command" != "show-servs" && "$command" != "restart-serv" && "$command" != "serv-status" && "$command" != "make-db" && "$command" != "info" && "$command" != "weather-forcast" && "$command" != "open-pkgs" && "$command" != "open-libs" && "$command" != "first-ran" ]]; then
+if [[ "$1" != -* && "$1" != "" && "$command" != "mirrors" && "$command" != "show-servs" && "$command" != "restart-serv" && "$command" != "serv-status" && "$command" != "make-db" && "$command" != "info" && "$command" != "weather" && "$command" != "open-pkgs" && "$command" != "open-libs" && "$command" != "first-ran" ]]; then
     package="$1"
     shift
 fi
@@ -219,7 +219,7 @@ fi
         fi
         ;;
         
-    weather-forcast)
+    weather)
         execute_command "curl wttr.in"
         ;;
         
@@ -261,7 +261,7 @@ fi
     *)
         echo "Invalid command: $command"
         echo "Usage: $0 <command> [<package>] [-a] [-p] [-l] [-1] [-2] ... [-9]"
-        echo "Commands: mirrors, show-servs, restart-serv, serv-status, make-db, info, weather-forcast, open-pkgs, open-libs, first-ran"
+        echo "Commands: mirrors, show-servs, restart-serv, serv-status, make-db, info, weather, open-pkgs, open-libs, first-ran"
         exit 1
         ;;
 esac
