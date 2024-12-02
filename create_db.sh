@@ -57,7 +57,8 @@ if [[ ! -f "$input_file" ]]; then
 fi
 
 # Create or clear the output YAML file
-> "$PKG_DB"/packages.yaml
+touch "$PKG_DB"/packages.yaml
+echo "" > "$PKG_DB"/packages.yaml
 
 # Read the file and process each line
 while IFS= read -r line; do

@@ -29,7 +29,8 @@ source_config
 # Output file
 ###output_file="$PKG_DB/library_dependencies.txt"
 output_file="$PKG_DB"/library_dependencies.txt
-> "$output_file"
+touch "$output_file"
+echo "" > "$output_file"
 
 # Function to check dependencies of a given library
 check() {
