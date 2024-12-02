@@ -53,7 +53,7 @@ As root `removepkg cptn`
 
 **mirrors and weather forcast**
 
-7. `cptn find-mirror` Will check all active slackware mirrorlist servers and print top 5 faster for your location.
+7. `cptn mirrors` (root) Will check all active slackware mirrorlist servers and print top 5 faster for your location.
 8. `cptn weather-forcast` Will print in terminal next days weather forcast for you :D *(assume you are not under vpn)*
 ---
 
