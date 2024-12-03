@@ -79,6 +79,10 @@ function source_config() {
 # Call the function to source the config
 source_config
 
+mkdir -p /var/log/captain-slack || exit 9
+DATE="$(date)"
+
+
 # Function to execute commands
 execute_command() {
     echo "Executing: $1"
@@ -88,7 +92,7 @@ execute_command() {
 # Check if at least one argument is provided
 if [ "$#" -lt 1 ]; then
     echo "Usage: $0 <command> [<package>] [-a] [-b] [-v] [-1] [-2] ... [-9]"
-    echo "Commands: mirrors, show-servs, restart-serv, serv-status, make-db, info, weather, open-pkgs, open-libs"
+    echo "Commands: mirrors, show-servs, restart-serv, serv-status, make-db, info, weather, open-pkgs, open-libs, deps"
     exit 1
 fi
 
@@ -109,7 +113,7 @@ flag_l=false
 number_flag=""
 fi
 # Check if $command is not one of the invalid commands
-if [[ "$1" != -* && "$1" != "" && "$command" != "mirrors" && "$command" != "show-servs" && "$command" != "restart-serv" && "$command" != "serv-status" && "$command" != "make-db" && "$command" != "info" && "$command" != "weather" && "$command" != "open-pkgs" && "$command" != "open-libs" && "$command" != "first-ran" ]]; then
+if [[ "$1" != -* && "$1" != "" && "$command" != "mirrors" && "$command" != "show-servs" && "$command" != "restart-serv" && "$command" != "serv-status" && "$command" != "make-db" && "$command" != "info" && "$command" != "weather" && "$command" != "open-pkgs" && "$command" != "open-libs" && "$command" != "first-run" ]]; then
     package="$1"
     shift
 fi
@@ -175,11 +179,12 @@ if [ "$EUID" -ne 0 ]; then
     echo "Please run as root!"
     exit 1
 fi
-        if [ -z "$package" ]; then
+       package=$1
+       if [ -z "$package" ]; then
             echo "Error: 'serv-status' command requires a rc.serv_name"
             exit 1
         fi
-        execute_command "bash /etc/rc.d/$package status"
+         bash "/etc/rc.d/$package" status
         ;;
 
     make-db)
@@ -242,8 +247,9 @@ fi
         ;;
         
     mirrors)
-        echo "Search for fast Slackware mirror"
-            execute_command "bash $APP_SERV/show-mirrors.sh"
+        number_flag="$1"
+        echo "Search for fast Slackware mirrors"
+            source "$APP_SERV/show-mirrors.sh" "$number_flag"
         ;;
 
     open-libs)
@@ -254,14 +260,14 @@ fi
             execute_command "xdg-open $PKG_DB/packages.yaml"
         ;;
 
-    first-ran)
+    first-run)
             execute_command "bash $APP_SERV/first-ran.sh"
         ;;
         
     *)
         echo "Invalid command: $command"
-        echo "Usage: $0 <command> [<package>] [-a] [-p] [-l] [-1] [-2] ... [-9]"
-        echo "Commands: mirrors, show-servs, restart-serv, serv-status, make-db, info, weather, open-pkgs, open-libs, first-ran"
+        echo "Usage: cptn <command> [<package>] [-a] [-p] [-l] [-1] [-2] ... [-9]"
+        echo "Commands: mirrors, show-servs, restart-serv, serv-status, make-db, info, weather, open-pkgs, open-libs, first-run"
         exit 1
         ;;
 esac

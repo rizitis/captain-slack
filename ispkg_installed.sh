@@ -38,7 +38,7 @@ search_package() {
     # Check if result is empty
     if [[ -n "$result" ]]; then
         echo "Package found:"
-        echo "$result" | yq
+        echo "$result" | /usr/bin/yq
     else
         echo "Package '$package_name' not found."
     fi

@@ -37,26 +37,25 @@ As root `removepkg cptn`
 
 ---
 **print infos**
-1. `cptn info package-name` Will print info for the package
-2. `cptn info package-name` the same if its a library
-3. `cptn open-libs` or `cptn open-pkgs` Defauld text editor will open with  the yaml file for installed libraries or packages
-
+1. `cptn info <package-name>` Will print info for the package
+2. `cptn info <package-name>` the same if its a library
+3. `cptn open-libs` or `cptn open-pkgs` Defauld text editor will open with  the yaml file for installed libraries or packages (only for read)
 ---
 
 **services**
 
-4. `cptn serv-status rc.service-name` (as root) Will print service status info
-5. `cptn restart-serv`   (as root) Will print all rc.services and ask use to chose which need restart
-6. `cptn show-servs` (as root) Will export in terminal all services and their status.
+1. `cptn serv-status <rc.service-name>` (as root) Will print service status info
+2. `cptn restart-serv`   (as root) Will print all rc.services and ask use to chose which need restart
+3. `cptn show-servs` (as root) Will export in terminal all services and their status.
 
 ---
 
 **mirrors and weather forcast**
 
-7. `cptn mirrors` (root) Will check all active slackware mirrorlist servers and print top 5 (default) faster for your location.
-   - `cptn mirrors -1` only the faster
-   - `cptn mirrors -[1..9]` Valid numbers are from 1 to 9. (if not -N flag set, then default is 5)
-8. `cptn weather` Will print in terminal next days weather forcast for you :D *(assume you are not under vpn)*
+1. `cptn mirrors` (as root) Will check all active slackware mirrorlist servers and print top 5 (default) faster for your location.
+   - `cptn mirrors -1` Using flag `-1` will print only the faster
+   - `cptn mirrors -[1..9]` Valid flags numbers are from 1 to 9. (if not -N flag set, then default is 5)
+2. `cptn weather` Will print in terminal next days weather forcast for you :D *(assume you are not under vpn)*
 ---
 
 #### Videos:

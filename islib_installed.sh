@@ -44,14 +44,14 @@ while IFS= read -r line; do
     # Check if the line contains the library name before ".so"
     if [[ $line =~ -\ name:.*$library_name.*\.so ]]; then
         # Print the matching line (library)
-        echo "$line" | yq
+        echo "$line" | /usr/bin/yq
         inside_block=false
     elif [[ $line =~ -\ name: ]] && [[ $inside_block == true ]]; then
         # If we encounter a new `- name:` line and we are inside the block, stop
         break
     elif [[ $inside_block == true ]]; then
         # Print dependencies while inside the block
-        echo "$line" | yq
+        echo "$line" | /usr/bin/yq
     fi
 
 done < "$yaml_file"

@@ -25,6 +25,14 @@ function source_config() {
 # Call the function to source the config
 source_config
 
+mkdir -p /var/log/captain-slack || exit 9
+DATE="$(date)"
+# Setup build log file
+LOGFILE=/var/log/captain-slack/debug_output.log
+# shellcheck disable=SC2086
+rm $LOGFILE || true
+exec > >(tee -a "$LOGFILE") 2>&1
+
 # Echo all variables sourced from the config file
 echo "Variables sourced from $CONFIG_FILE:"
 while IFS="=" read -r key value; do

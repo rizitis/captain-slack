@@ -22,6 +22,14 @@ function source_config() {
 # Call the function to source the config
 source_config
 
+mkdir -p /var/log/captain-slack || exit 9
+DATE="$(date)"
+# Setup build log file
+LOGFILE=/var/log/captain-slack/cptn-main.log
+# shellcheck disable=SC2086
+rm $LOGFILE || true
+touch "$LOGFILE"
+exec > >(tee -a "$LOGFILE") 2>&1
 
 # Function to process the package line
 process_package_line() {
@@ -43,7 +51,7 @@ process_package_line() {
             echo "  tag: ${tag}" >> "$PKG_DB"/packages.yaml
         fi
     else
-        echo "Invalid format: $line"  # Debugging info
+        echo "Invalid package format: $line" >> "$LOGFILE"
     fi
 }
 

@@ -23,7 +23,7 @@ function source_config() {
             value=$(echo "$value" | xargs)  # Trim whitespace
             value=$(eval echo "$value")  # Resolve variables like $APP_HOME
             export "$key"="$value"  # Export as environment variable
-            echo "$key = $value"  # Automatically echo the key-value pair
+            #echo "$key = $value"  # Automatically echo the key-value pair
         fi
     done < "$CONFIG_FILE"
 }
@@ -31,7 +31,13 @@ function source_config() {
 # Call the function to source the config
 source_config
 
-
+mkdir -p /var/log/captain-slack || exit 9
+DATE="$(date)"
+# Setup build log file
+LOGFILE=/var/log/captain-slack/mirrors.log
+# shellcheck disable=SC2086
+rm $LOGFILE || true
+exec > >(tee -a "$LOGFILE") 2>&1
 
 cd "$MIR_DIR" || exit 1
 
@@ -121,16 +127,20 @@ if [ ${#mirror_times[@]} -eq 0 ]; then
 fi
 echo ""
 echo ""
+number_flag="$1"
 # Sort the mirrors by their ping times and print the top 3
-echo "Top 5 fastest mirrors for your location:"
+
 if [ ! "$number_flag" ]; then
+echo "Top 5 fastest mirrors for your location:"
 for mirror in "${!mirror_times[@]}" ; do
     echo "$mirror ${mirror_times[$mirror]}"
 done | sort -k2 -n | head -n 5
 else
+number_flag_var="${number_flag#-}"
+echo "Top $number_flag_var fastest mirrors for your location:"
 for mirror in "${!mirror_times[@]}" ; do
     echo "$mirror ${mirror_times[$mirror]}"
-done | sort -k2 -n | head -n "$number_flag"
+done | sort -k2 -n | head -n "$number_flag_var"
 fi
 
 echo ""

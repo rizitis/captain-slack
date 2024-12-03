@@ -25,6 +25,16 @@ function source_config() {
 # Call the function to source the config
 source_config
 
+mkdir -p /var/log/captain-slack || exit 9
+DATE="$(date)"
+# Setup build log file
+LOGFILE=/var/log/captain-slack/broken_libs_output.log
+# shellcheck disable=SC2086
+rm $LOGFILE || true
+touch "$LOGFILE"
+exec > >(tee -a "$LOGFILE" | grep --line-buffered "broken symbolic link") 2>&1 || true
+
+
 
 # Output file
 ###output_file="$PKG_DB/library_dependencies.txt"
@@ -32,6 +42,10 @@ output_file="$PKG_DB"/library_dependencies.txt
 mkdir -p "$PKG_DB" || exit 89
 touch "$output_file"
 echo "" > "$output_file"
+
+# Log file
+mkdir -p /var/log/captain-slack
+> "$libs_wrong"
 
 # Function to check dependencies of a given library
 check() {
@@ -57,11 +71,14 @@ find /usr/{lib,lib64} -name "*.so*" | while read -r lib; do
     if objdump -p "$lib" > /dev/null 2>&1; then
         check "$lib" &  # Run check in the background
     else
+        echo "Note: $lib is not a valid binary or shared library." >> "$libs_wrong"
+        file $lib
         echo "Note: $lib is not a valid binary or shared library." >> "$output_file"
         file $lib
     fi
 done
 
-wait  # Wait for all background jobs to finish
+#wait  # Wait for all background jobs to finish
 
 echo "Library dependencies have been written to $output_file."
+echo "You can also check $LOGFILE for broken or wrong libs"
