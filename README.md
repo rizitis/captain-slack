@@ -53,8 +53,10 @@ As root `removepkg cptn`
 
 **mirrors and weather forcast**
 
-7. `cptn mirrors` (root) Will check all active slackware mirrorlist servers and print top 5 faster for your location.
-8. `cptn weather-forcast` Will print in terminal next days weather forcast for you :D *(assume you are not under vpn)*
+7. `cptn mirrors` (root) Will check all active slackware mirrorlist servers and print top 5 (default) faster for your location.
+   - `cptn mirrors -1` only the faster
+   - `cptn mirrors -[1..9]` Valid numbers are from 1 to 9. (if not -N flag set, then default is 5)
+8. `cptn weather` Will print in terminal next days weather forcast for you :D *(assume you are not under vpn)*
 ---
 
 #### Videos:
