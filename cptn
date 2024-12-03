@@ -92,7 +92,7 @@ execute_command() {
 # Check if at least one argument is provided
 if [ "$#" -lt 1 ]; then
     echo "Usage: $0 <command> [<package>] [-a] [-b] [-v] [-1] [-2] ... [-9]"
-    echo "Commands: mirrors, show-servs, restart-serv, serv-status, make-db, info, weather, open-pkgs, open-libs, deps"
+    echo "Commands: mirrors, show-servs, restart-serv, serv-status, make-db, info, weather, open-pkgs, open-libs"
     exit 1
 fi
 
