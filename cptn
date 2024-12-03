@@ -92,7 +92,7 @@ execute_command() {
 # Check if at least one argument is provided
 if [ "$#" -lt 1 ]; then
     echo "Usage: $0 <command> [<package>] [-a] [-b] [-v] [-1] [-2] ... [-9]"
-    echo "Commands: mirrors, show-servs, restart-serv, serv-status, make-db, info, weather, open-pkgs, open-libs"
+    echo "Commands: mirrors, show-servs, restart-serv, serv-status, make-db, info, weather, open-pkgs, open-libs, open-logs"
     exit 1
 fi
 
@@ -260,6 +260,10 @@ fi
             execute_command "xdg-open $PKG_DB/packages.yaml"
         ;;
 
+    open-logs)
+            execute_command "xdg-open $CPTN_LOGS"
+        ;;
+
     first-run)
             execute_command "bash $APP_SERV/first-ran.sh"
         ;;
@@ -267,7 +271,7 @@ fi
     *)
         echo "Invalid command: $command"
         echo "Usage: cptn <command> [<package>] [-a] [-p] [-l] [-1] [-2] ... [-9]"
-        echo "Commands: mirrors, show-servs, restart-serv, serv-status, make-db, info, weather, open-pkgs, open-libs, first-run"
+        echo "Commands: mirrors, show-servs, restart-serv, serv-status, make-db, info, weather, open-pkgs, open-libs, first-run, open-logs"
         exit 1
         ;;
 esac
