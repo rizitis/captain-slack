@@ -70,6 +70,13 @@ https://asciinema.org/a/CBgyGtqAuDwLphHhnbZubQAzq
 
 ---
 
+#### ScreenShots
+[info](./info.png)
+---
+[weather](./weather.png)
+---
+
+
 
 #### TODO
 - `cptn make coffee`
