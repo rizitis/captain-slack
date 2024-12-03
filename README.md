@@ -65,6 +65,12 @@ https://asciinema.org/a/CBgyGtqAuDwLphHhnbZubQAzq
 
 ---
 
+**NOTE:** main README.md as main branch it self, is the develop branch. 
+<br> Some informations or commands may not exist yet for latest cptn release.<br>
+Please read **release version branch README.md** for valid infos.
+
+---
+
 #### TODO
 `cptn make coffee`
 
