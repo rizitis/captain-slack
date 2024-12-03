@@ -196,7 +196,6 @@ fi
         echo "Creating DataBase"
         if [ "$flag_a" = true ]; then
         echo "Creating DataBase for all installed Libraries and Packages"
-            execute_command "bash $APP_SERV/first-ran.sh"
             execute_command "bash $APP_SERV/export-installed.sh"
             execute_command "bash $APP_SERV/create_db.sh"
             execute_command "bash $APP_SERV/export-tags.sh"
@@ -206,7 +205,6 @@ fi
         elif
             [ "$flag_p" = true ]; then
         echo "Creating DataBase for all installed Packages"
-            execute_command "bash $APP_SERV/first-ran.sh"
             execute_command "bash $APP_SERV/export-installed.sh"
             execute_command "bash $APP_SERV/create_db.sh"
             execute_command "bash $APP_SERV/export-tags.sh"
@@ -214,7 +212,6 @@ fi
         elif
             [ "$flag_l" = true ]; then
         echo "Creating DataBase for all installed Libraries"
-            execute_command "bash $APP_SERV/first-ran.sh"
             execute_command "bash $APP_SERV/ldd-explorer.sh"
             execute_command "bash $APP_SERV/create_libs_yaml.sh"
         else

@@ -9,9 +9,9 @@
 ## Install
 
 - required:`yq` and `jq`, from SBo
-* DO NOT Download source.tar.gz from release but zip file from branches.
-- extract zip file and change in folder.
-* As root ran `bash cptn.SlackBuild`
+* DO NOT Download source.tar.gz from release it will not work. Please Download *zip* file from latest branch.
+- Unzip zip file and change in folder.
+* As root run `bash cptn.SlackBuild`
 - Finally `upgradepkg --install-new /tmp/cptn*.tlz`
 
 Alternative method (unstable):
@@ -34,6 +34,8 @@ As root `removepkg cptn`
 
 ### Usage:
 
+If you install Captain-Slack the first thing you must do is create data-base for packages and libraries:<p>
+
 **create db**
 
 1. `cptn make-db -a` (as root) Will create a full database of all installed packages and libraries (need some time...)
@@ -41,12 +43,15 @@ As root `removepkg cptn`
 3. `cptn make-db -l` (as root) The same but only for libraries and their deps...
 
 ---
+For print informations about your current system use:<p>
+
 **print infos**
 1. `cptn info <package-name>` Will print info for the package
 2. `cptn info <package-name>` the same if its a library (the **.so** extension not needed)
 3. `cptn open-libs` or `cptn open-pkgs` Defauld text editor will open  the yaml file for installed libraries or packages (only for read)
 3. `cptn open-logs` Default file manager will open /var/log/captain-slack folder for read files.
 ---
+To print informations about running services or status of a services or restart a service:<p>
 
 **services**
 
@@ -55,6 +60,7 @@ As root `removepkg cptn`
 3. `cptn show-servs` (as root) Will export in terminal all services and their status.
 
 ---
+To find and use fast mirrors as for your location from mirrorlist:<p>
 
 **mirrors and weather forcast**
 
