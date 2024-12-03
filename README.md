@@ -71,9 +71,9 @@ https://asciinema.org/a/CBgyGtqAuDwLphHhnbZubQAzq
 ---
 
 #### ScreenShots
-[info](./info.png)
+![info](./info.png)
 ---
-[weather](./weather.png)
+![weather](./weather.png)
 ---
 
 
