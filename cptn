@@ -176,7 +176,7 @@ case "$command" in
     pkg-libs)
     package="$2"
     echo "$package..."
-    source  "$APP_SERV"/fpkgl.sh "$package"
+    source  "$APP_SERV"/fpkgl.sh "$package"*.t?z
         ;;
 
     serv-status)
