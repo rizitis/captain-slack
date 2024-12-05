@@ -50,6 +50,7 @@ For print informations about your current system use:<p>
 2. `cptn info <package-name>` the same if its a library (the **.so** extension not needed)
 3. `cptn open-libs` or `cptn open-pkgs` Defauld text editor will open  the yaml file for installed libraries or packages (only for read)
 3. `cptn open-logs` Default file manager will open /var/log/captain-slack folder for read files.
+4. `cptn pkg-libs package.t?z` Read  elf headers of executables and list needed libraries
 ---
 To print informations about running services or status of a services or restart a service:<p>
 
