@@ -55,8 +55,9 @@ print_heading() {
     echo -e "${UNDERLINE}${BOLD}${BLUE}$1${RESET}"
 }
 print_heading "------------------"
-print_info "PACKAGE SIZE"
-cat "$package_name"* | grep SIZE
+for i in $(ls /var/lib/pkgtools/packages/ | grep "^$package_name-[0-9]\+"); do
+    cat "/var/lib/pkgtools/packages/$i" | grep SIZE
+done
 print_heading "------------------"
 echo ""
     # Loop through possible image extensions and find the first matching file
