@@ -8,7 +8,7 @@
 
 ## Install
 
-- required:`yq` and `jq`, from SBo
+- required:`yq`, `chafa` and `jq`, from SBo
 * DO NOT Download source.tar.gz from release it will not work. Please Download *zip* file from latest branch.
 - Unzip zip file and change in folder.
 * As root run `bash cptn.SlackBuild`

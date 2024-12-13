@@ -26,7 +26,7 @@ yaml_file="$PKG_DB"/packages.yaml
 # Function to search for a package by name
 search_package() {
     local package_name="$package"
-    
+
 
 
     # Use yq to find the package details with strict equality
@@ -36,17 +36,52 @@ search_package() {
 #    echo "Search result: $result"
 
     # Check if result is empty
-    if [[ -n "$result" ]]; then
-        echo "Package found:"
-        echo "$result" | /usr/bin/yq
+if [[ -n "$result" ]]; then
+    echo "Package found:"
+    echo "$result" | /usr/bin/yq
+    print_info() {
+    echo -e "📦 **$1**\n$2"
+}
+# Define color codes and formatting
+BOLD="\e[1m"
+BLUE="\e[34m"
+RESET="\e[0m"
+UNDERLINE="\e[4m"
+GREEN="\e[32m"
+
+cd /var/lib/pkgtools/packages/
+echo ""
+print_heading() {
+    echo -e "${UNDERLINE}${BOLD}${BLUE}$1${RESET}"
+}
+print_heading "------------------"
+print_info "PACKAGE SIZE"
+cat "$package_name"* | grep SIZE
+print_heading "------------------"
+echo ""
+    # Loop through possible image extensions and find the first matching file
+    for ext in png jpeg jpg svg; do
+        icon_path="$(find /usr/share/ -name "$package"."$ext" -print -quit)"
+        [ -n "$icon_path" ] && break  # Exit loop once a match is found
+    done
+
+    # Check if an icon was found and display it using chafa
+    if [ -n "$icon_path" ]; then
+        print_heading "$package icon"
+        chafa --symbols block+border-solid -s 10x10 "$icon_path"
     else
-        echo "Package '$package_name' not found."
+        echo "No icon found for package '$package'."
     fi
+
+else
+    echo "Package '$package' not found."
+fi
+
 }
 
 # Example usage: search for a package by name
 pkg_name="$1"  # Take the package name from the first script argument
 search_package "$pkg_name"
 
-echo "More infos you might find in $PKG_DB :"
-ls "$PKG_DB"
+print_heading "More infos you might find in $PKG_DB :"
+ls --color "$PKG_DB"
