@@ -57,6 +57,7 @@ print_heading() {
 print_heading "------------------"
 for i in $(ls /var/lib/pkgtools/packages/ | grep "^$package_name-[0-9]\+"); do
     cat "/var/lib/pkgtools/packages/$i" | grep SIZE
+    cat "/var/lib/pkgtools/packages/$i" | grep REQUIRED:
 done
 print_heading "------------------"
 echo ""

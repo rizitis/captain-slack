@@ -93,3 +93,8 @@ https://asciinema.org/a/CBgyGtqAuDwLphHhnbZubQAzq
 - `cptn make coffee`
 - `fix bugs`
 
+---
+
+#### LATEST NEWS
+*If you build using [AthOS](https://github.com/rizitis/PLASMA_WORLD) (athos) build system, **cptn info** cmd will print dependencies informations also*:
+![AthOS](./athos.png)
