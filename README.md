@@ -56,7 +56,7 @@ To print informations about running services or status of a services or restart 
 **services**
 
 1. `cptn serv-status <rc.service-name>` (as root) Will print service status info
-2. `cptn restart-serv`   (as root) Will print all rc.services and ask use to chose which need restart
+2. `cptn restart-serv`   (as root) Will print all rc.services and ask user to chose which need restart
 3. `cptn show-servs` (as root) Will export in terminal all services and their status.
 
 ---

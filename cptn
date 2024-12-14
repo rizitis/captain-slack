@@ -92,7 +92,7 @@ execute_command() {
 # Check if at least one argument is provided
 if [ "$#" -lt 1 ]; then
     echo "Usage: $0 <command> [<package>] [-a] [-b] [-v] [-1] [-2] ... [-9]"
-    echo "Commands: mirrors, show-servs, restart-serv, serv-status, make-db, info, weather, open-pkgs, open-libs, open-logs"
+    echo "Commands: mirrors, show-servs, restart-serv, serv-status, make-db, info, weather, open-pkgs, open-libs, open-logs, clear-logs"
     exit 1
 fi
 
@@ -113,7 +113,7 @@ flag_l=false
 number_flag=""
 fi
 # Check if $command is not one of the invalid commands
-if [[ "$1" != -* && "$1" != "" && "$command" != "mirrors" && "$command" != "show-servs" && "$command" != "restart-serv" && "$command" != "serv-status" && "$command" != "make-db" && "$command" != "info" && "$command" != "weather" && "$command" != "open-pkgs" && "$command" != "open-libs" && "$command" != "first-run" ]]; then
+if [[ "$1" != -* && "$1" != "" && "$command" != "mirrors" && "$command" != "show-servs" && "$command" != "restart-serv" && "$command" != "serv-status" && "$command" != "make-db" && "$command" != "info" && "$command" != "weather" && "$command" != "open-pkgs" && "$command" != "open-libs" && "$command" != "first-run" && "$command" != "clear-logs" ]]; then
     package="$1"
     shift
 fi
@@ -264,11 +264,21 @@ fi
     first-run)
             execute_command "bash $APP_SERV/first-ran.sh"
         ;;
+
+    clear-logs)
+    # Check if the script is being run as root
+    if [ "$EUID" -ne 0 ]; then
+    echo "Please run as root!"
+    exit 1
+    fi
+            rm "$CPTN_LOGS"/*.log || exit
+            echo "Success. Clear all log files from $CPTN_LOGS"
+        ;;
         
     *)
         echo "Invalid command: $command"
         echo "Usage: cptn <command> [<package>] [-a] [-p] [-l] [-1] [-2] ... [-9]"
-        echo "Commands: mirrors, show-servs, restart-serv, serv-status, make-db, info, weather, open-pkgs, open-libs, first-run, open-logs"
+        echo "Commands: mirrors, show-servs, restart-serv, serv-status, make-db, info, weather, open-pkgs, open-libs, first-run, open-logs, clear-logs"
         exit 1
         ;;
 esac
