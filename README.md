@@ -114,4 +114,9 @@ etc...
 For your SlackBuilds from SBo-ponce you must add this line in SlackBuild:
 `grep "^REQUIRES=" $CWD/$PRGNAM.info | sed 's/^REQUIRES="//;s/"$//' | tr ' ' '\n' >  "$PKG"/usr/doc/"$PRGNAM-$VERSION"/slack-required`
 
+> If you are in Slackware-current and using slpkg you can use my [fork](https://github.com/rizitis/slackbuilds-current) of [ponce repo](https://github.com/Ponce/slackbuilds).
+> This fork has all SlackBuild patched for slack-required and more... But you use it at your **own risk**.
+> READ [disclaimer](https://github.com/rizitis/slackbuilds-current#disclaimer) first!
+> Original SlackBuilds Maintainers or SlackBuilds.org or Ponce **has no responsibility** about this fork!
+
 
