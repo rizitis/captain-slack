@@ -36,7 +36,7 @@ yaml_file="$PKG_DB"/libraries_dependencies.yaml
 # Flag to check if we are inside a matching block
 inside_block=false
 
-echo "Libraries:"
+echo -e "\033[38;5;214mLibraries:\033[0m"
 
 # Read the YAML file line by line
 while IFS= read -r line; do

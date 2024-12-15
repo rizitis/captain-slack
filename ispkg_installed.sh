@@ -37,7 +37,7 @@ search_package() {
 
     # Check if result is empty
 if [[ -n "$result" ]]; then
-    echo "Package found:"
+    echo -e "\033[38;5;214mPackage found:\033[0m"
     echo "$result" | /usr/bin/yq
     print_info() {
     echo -e "📦 **$1**\n$2"
@@ -57,7 +57,11 @@ print_heading() {
 print_heading "------------------"
 for i in $(ls /var/lib/pkgtools/packages/ | grep "^$package_name-[0-9]\+"); do
     cat "/var/lib/pkgtools/packages/$i" | grep SIZE
-    cat "/var/lib/pkgtools/packages/$i" | grep REQUIRED:
+    echo -e "${BLUE}REQUIRES:${RESET}"
+    cat /usr/doc/"$package_name"-*/slack-required 2>/dev/null | while IFS= read -r line; do
+    # Add color to the output
+    echo -e "\033[1;33m${line}\033[0m"  # Yellow color
+done
 done
 print_heading "------------------"
 echo ""
@@ -86,4 +90,4 @@ pkg_name="$1"  # Take the package name from the first script argument
 search_package "$pkg_name"
 
 print_heading "More infos you might find in $PKG_DB :"
-ls --color "$PKG_DB"
+LS_COLORS='di=1;34:fi=0;32' ls --color "$PKG_DB"
