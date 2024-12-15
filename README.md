@@ -99,3 +99,16 @@ https://asciinema.org/a/CBgyGtqAuDwLphHhnbZubQAzq
 #### LATEST NEWS
 *If you build using [AthOS](https://github.com/rizitis/PLASMA_WORLD) (athos) build system, **cptn info** cmd will print dependencies informations also*:
 ![AthOS](./athos.png)
+
+*update*:<br>
+After conraid suggestions I made some changes. Now `cptn info` command will read also his build as we both storing a slack-required file in `/usr/doc/$PRGNAM-$VERSION/` folder and things are more easy and more proper discribed ;)<br>
+If you also have local builds is a good choice to include a slack-required file in the same folder.<br>
+- *slack-required* format is:
+```
+foo
+foo1
+foo-do
+etc...
+```
+
+
