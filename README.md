@@ -116,6 +116,15 @@ For your SlackBuilds from SBo-ponce you must add this line in SlackBuild:
 
 > If you are in Slackware-current and using slpkg you can use my [fork](https://github.com/rizitis/slackbuilds-current) of [ponce repo](https://github.com/Ponce/slackbuilds).
 > This fork has all SlackBuild patched for slack-required and more... But you use it at your **own risk**.
+This is the edit in all SlackBuilds:
+```
+cd $PKG
+if [ -f $CWD/slack-required ]; then cat $CWD/slack-required > $PKG/install/slack-required; fi
+if [ -f $CWD/slack-required ]; then cat $CWD/slack-required > $PKG/usr/doc/$PRGNAM-$VERSION/slack-required; fi
+if [ -f $CWD/dependees-on ]; then cat $CWD/dependees-on > $PKG/usr/doc/$PRGNAM-$VERSION/dependees-on; fi
+/sbin/makepkg -l y -c n $OUTPUT/$PRGNAM-$VERSION-$ARCH-$BUILD$TAG.$PKGTYPE
+if [ -f $CWD/slack-required ]; then cp $CWD/slack-required  $OUTPUT/$PRGNAM-$VERSION-$ARCH-$BUILD$TAG.dep; fi
+```
 > READ [disclaimer](https://github.com/rizitis/slackbuilds-current#disclaimer) first!
 > Original SlackBuilds Maintainers or SlackBuilds.org or Ponce **has no responsibility** about this fork!
 
