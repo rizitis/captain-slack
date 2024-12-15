@@ -111,4 +111,7 @@ foo-do
 etc...
 ```
 
+For your SlackBuilds from SBo-ponce you must add this line in SlackBuild:
+`grep "^REQUIRES=" $CWD/$PRGNAM.info | sed 's/^REQUIRES="//;s/"$//' | tr ' ' '\n' >  "$PKG"/usr/doc/"$PRGNAM-$VERSION"/slack-required`
+
 
