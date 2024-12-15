@@ -116,6 +116,7 @@ For your SlackBuilds from SBo-ponce you must add this line in SlackBuild:
 
 > If you are in Slackware-current and using slpkg you can use my [fork](https://github.com/rizitis/slackbuilds-current) of [ponce repo](https://github.com/Ponce/slackbuilds).
 > This fork has all SlackBuild patched for slack-required and more... But you use it at your **own risk**.
+
 This is the edit in all SlackBuilds:
 ```
 cd $PKG
