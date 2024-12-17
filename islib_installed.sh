@@ -45,7 +45,7 @@ while IFS= read -r line; do
     if [[ $line =~ -\ name:.*$library_name.*\.so ]]; then
         # Print the matching line (library)
         echo "$line" | /usr/bin/yq
-        inside_block=false
+        inside_block=true
     elif [[ $line =~ -\ name: ]] && [[ $inside_block == true ]]; then
         # If we encounter a new `- name:` line and we are inside the block, stop
         break

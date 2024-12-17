@@ -63,6 +63,8 @@ for i in $(ls /var/lib/pkgtools/packages/ | grep "^$package_name-[0-9]\+"); do
     echo -e "\033[1;33m${line}\033[0m"  # Yellow color
 done
 done
+curl -sSL https://raw.githubusercontent.com/gapan/slackware-deps/15.0/$1.dep | grep -v "^aaa_libraries" || true
+
 print_heading "------------------"
 echo ""
     # Loop through possible image extensions and find the first matching file
