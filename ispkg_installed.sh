@@ -19,6 +19,9 @@ function source_config() {
 }
 
 source_config
+print_heading() {
+    echo -e "${UNDERLINE}${BOLD}${BLUE}$1${RESET}"
+}
 
 # YAML file path
 yaml_file="$PKG_DB"/packages.yaml
@@ -57,12 +60,14 @@ print_heading() {
 print_heading "------------------"
 for i in $(ls /var/lib/pkgtools/packages/ | grep "^$package_name-[0-9]\+"); do
     cat "/var/lib/pkgtools/packages/$i" | grep SIZE
-    echo -e "${BLUE}REQUIRES:${RESET}"
+    echo -e "${BLUE}Custom build REQUIRES:${RESET}"
     cat /usr/doc/"$package_name"-*/slack-required 2>/dev/null | while IFS= read -r line; do
     # Add color to the output
     echo -e "\033[1;33m${line}\033[0m"  # Yellow color
 done
 done
+print_heading "------------------"
+echo -e  "${BOLD}SalixOS build REQUIRES:${RESET}"
 curl -sSL https://raw.githubusercontent.com/gapan/slackware-deps/15.0/$1.dep | grep -v "^aaa_libraries" || true
 
 print_heading "------------------"
