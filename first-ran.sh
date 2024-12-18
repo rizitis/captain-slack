@@ -1,4 +1,5 @@
 #!/bin/bash
+# shellcheck disable=SC2034
 
 # I add this script because in some systems make-db -a dont work first time...
 # so now user will ran this script first time installation to be sure that the second time when make-db run cptn-main.ini will be sourced.

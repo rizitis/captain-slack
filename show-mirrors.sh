@@ -1,6 +1,6 @@
 #!/bin/bash
 
-
+# shellcheck disable=SC2034
 # This scipt interact with https://mirrors.slackware.com/mirrorlist/ and download the updated mirrolist.
 # Then split file to 3 part: http, ftp, rsync in $MIR_DIR (/var/lib/captain-slack/mirror-test/)
 # Edit files make them pretty and ready to be used if arch != aarch64

@@ -1,4 +1,5 @@
 #!/bin/bash
+# shellcheck disable=SC2034
 
 # Try to source the configuration file ini and see if it works
 CONFIG_FILE=/etc/captain-slack/cptn-main.ini
@@ -71,7 +72,6 @@ for package in /var/lib/pkgtools/packages/*; do
         else
             echo "${app_name}" >> "$output_dir/system.txt" # No '=' sign, just the package name
         fi
-
     elif [ "$num_parts" -eq 3 ]; then
         # Handle cases with only 3 parts (assumed to be app_name-version-architecture)
         app_name="${parts[0]}"

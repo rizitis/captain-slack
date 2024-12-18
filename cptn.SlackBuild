@@ -1,5 +1,5 @@
 #!/bin/bash
-
+# shellcheck disable=SC2140,SC2046,SC2086
 # Slackware build script for Captain-Slack
 
 #
@@ -49,14 +49,14 @@ rm -rf "$PKG"
 
 mkdir -p "$PKG"/usr/local/bin/captain-slack/ "$PKG"/etc/captain-slack "$PKG"/var/lib/captain-slack/{mirror-db,system-db} "$PKG"/var/log/captain-slack "$PKG"/usr/share/captain-slack
 
-cd $PKG
+cd "$PKG"
 pushd $CWD
 
-cp cptn-main.ini $PKG/etc/captain-slack/
-cp cptn $PKG/usr/local/bin/
-chmod +x $PKG/usr/local/bin/cptn
-cp *.sh $PKG/usr/local/bin/captain-slack/
-chmod +x $PKG/usr/local/bin/captain-slack/*.sh
+cp cptn-main.ini "$PKG"/etc/captain-slack/
+cp cptn "$PKG"/usr/local/bin/
+chmod +x "$PKG"/usr/local/bin/cptn
+cp *.sh "$PKG"/usr/local/bin/captain-slack/
+chmod +x "$PKG"/usr/local/bin/captain-slack/*.sh
 
 mkdir -p "$PKG"/install
 cat <<EOL > "$PKG"/install/slack-desc
@@ -74,10 +74,12 @@ cptn: Captain-Slack (cptn)
 cptn:
 EOL
 
-mkdir -p $PKG/usr/doc/$PRGNAM-$VERSION
+mkdir -p "$PKG"/usr/doc/"$PRGNAM-$VERSION"
 cp -a README* \
-  $PKG/usr/doc/$PRGNAM-$VERSION
-cat $PRGNAM.SlackBuild > $PKG/usr/doc/$PRGNAM-$VERSION/$PRGNAM.SlackBuild
-
+  "$PKG"/usr/doc/"$PRGNAM-$VERSION"
+cat $PRGNAM.SlackBuild > "$PKG"/usr/doc/"$PRGNAM-$VERSION"/"$PRGNAM".SlackBuild
+echo "chafa" > "$PKG"/usr/doc/"$PRGNAM-$VERSION"/slack-required
+echo "jq" >> "$PKG"/usr/doc/"$PRGNAM-$VERSION"/slack-required
+echo "yq" >> "$PKG"/usr/doc/"$PRGNAM-$VERSION"/slack-required
 popd
-/sbin/makepkg -l y -c n $OUTPUT/$PRGNAM-$VERSION-$ARCH-$BUILD$TAG.$PKGTYPE
+/sbin/makepkg -l y -c n "$OUTPUT"/"$PRGNAM-$VERSION"-"$ARCH"-"$BUILD""$TAG"."$PKGTYPE"

@@ -1,5 +1,5 @@
 #!/bin/bash
-
+# shellcheck disable=SC2034
 # Try to source the configuration file ini and see if it works
 CONFIG_FILE=/etc/captain-slack/cptn-main.ini
 

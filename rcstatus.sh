@@ -1,4 +1,6 @@
 #!/bin/bash
+# shellcheck disable=SC2034,SC2046,SC2006,SC2086
+
 # this is a fork of rccheck with thanks to the original developer.
 # http://distro.ibiblio.org/amigolinux/download/AmigoProjects/Sys-Utils/
 
