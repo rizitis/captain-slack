@@ -171,6 +171,7 @@ case "$command" in
     echo "$package..."
         source "$APP_SERV/islib_installed.sh" "$package"
         source "$APP_SERV/ispkg_installed.sh" "$package"
+        source "$APP_SERV/print_bins.sh" "$package"
         ;;
 
     serv-status)
@@ -196,6 +197,7 @@ fi
         echo "Creating DataBase"
         if [ "$flag_a" = true ]; then
         echo "Creating DataBase for all installed Libraries and Packages"
+            execute_command "bash $APP_SERV/find_bins.sh"
             execute_command "bash $APP_SERV/export-installed.sh"
             execute_command "bash $APP_SERV/create_db.sh"
             execute_command "bash $APP_SERV/export-tags.sh"
@@ -205,6 +207,7 @@ fi
         elif
             [ "$flag_p" = true ]; then
         echo "Creating DataBase for all installed Packages"
+            execute_command "bash $APP_SERV/find_bins.sh"
             execute_command "bash $APP_SERV/export-installed.sh"
             execute_command "bash $APP_SERV/create_db.sh"
             execute_command "bash $APP_SERV/export-tags.sh"
