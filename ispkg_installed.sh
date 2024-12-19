@@ -67,7 +67,7 @@ for i in $(ls /var/lib/pkgtools/packages/ | grep "^$package_name-[0-9]\+"); do
 done
 done
 print_heading "------------------"
-echo -e  "${BOLD}SalixOS build REQUIRES:${RESET}"
+echo -e  "${BOLD}https://github.com/gapan/slackware-deps/tree/15.0/$1.dep:${RESET}"
 curl -sSL https://raw.githubusercontent.com/gapan/slackware-deps/15.0/$1.dep | grep -v "^aaa_libraries" || true
 
 print_heading "------------------"
