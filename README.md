@@ -72,10 +72,9 @@ To find and use fast mirrors as for your location from mirrorlist:<p>
 ---
 
 #### Videos:
-https://asciinema.org/a/5uULLvA12w3Yj69HrEqh9CNPK <br>
-https://asciinema.org/a/CBgyGtqAuDwLphHhnbZubQAzq
-
-
+[![asciicast](https://asciinema.org/a/1jhy9rCHTXx0q8oClxxVQz0uC.svg)](https://asciinema.org/a/1jhy9rCHTXx0q8oClxxVQz0uC)
+---
+[![asciicast](https://asciinema.org/a/9GcocpN3UshAcZJ2uLZFoSBTT.svg)](https://asciinema.org/a/9GcocpN3UshAcZJ2uLZFoSBTT)
 ---
 
 #### ScreenShots
