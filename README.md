@@ -86,6 +86,7 @@ To find and use fast mirrors as for your location from mirrorlist:<p>
 #### Examples.yaml
 1. [libraries](./libraries_dependencies.yaml)
 2. [packages](./packages.yaml)
+3. [executable_dependencies](./app_dependencies.yaml)
 
 
 
