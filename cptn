@@ -110,6 +110,7 @@ package=""
 flag_a=false
 flag_p=false
 flag_l=false
+verbose=false
 number_flag=""
 fi
 # Check if $command is not one of the invalid commands
@@ -215,6 +216,15 @@ fi
         elif
             [ "$flag_l" = true ]; then
         echo "Creating DataBase for all installed Libraries"
+            execute_command "bash $APP_SERV/ldd-explorer.sh"
+            execute_command "bash $APP_SERV/create_libs_yaml.sh"
+        elif
+            [ "$flag_v" = true ]; then
+        echo "Creating DataBase for all installed BUT NOT BINS ldd"
+            execute_command "bash $APP_SERV/export-installed.sh"
+            execute_command "bash $APP_SERV/create_db.sh"
+            execute_command "bash $APP_SERV/export-tags.sh"
+            execute_command "bash $APP_SERV/validate-tags.sh"
             execute_command "bash $APP_SERV/ldd-explorer.sh"
             execute_command "bash $APP_SERV/create_libs_yaml.sh"
         else

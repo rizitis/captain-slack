@@ -10,7 +10,7 @@
   version: 3.2.6
   build_version: 8
 - package: Greybird
-  version: 3.22.15
+  version: 3.23.4
   build_version: 1
 - package: Imath
   version: 3.1.12
@@ -51,7 +51,7 @@
   version: 5.15.11
   build_version: 3
 - package: PyQt5_sip
-  version: 12.16.0
+  version: 12.16.1
   build_version: 1
 - package: QMPlay2
   version: 24.04.07
@@ -71,7 +71,7 @@
   version: 1.0.4
   build_version: 3
 - package: SDL2_image
-  version: 2.8.2
+  version: 2.8.3
   build_version: 1
 - package: SDL2_mixer
   version: 2.8.0
@@ -104,7 +104,7 @@
   build_version: 5
 - package: aaa_libraries
   version: 15.1
-  build_version: 34
+  build_version: 35
 - package: aaa_terminfo
   version: 6.5
   build_version: 1
@@ -119,7 +119,7 @@
   version: 20240722.0
   build_version: 1
 - package: accessibility-inspector
-  version: 24.08.3
+  version: 24.12.0
   build_version: 1
   tag: rtz
 - package: accountsservice
@@ -157,27 +157,27 @@
   version: 20240517_7642b10
   build_version: 1
 - package: akonadi
-  version: 24.08.3
+  version: 24.12.0
   build_version: 1
   tag: rtz
 - package: akonadi-calendar
-  version: 24.08.3
+  version: 24.12.0
   build_version: 1
   tag: rtz
 - package: akonadi-calendar-tools
-  version: 24.08.3
+  version: 24.12.0
   build_version: 1
   tag: rtz
 - package: akonadi-contacts
-  version: 24.08.3
+  version: 24.12.0
   build_version: 1
   tag: rtz
 - package: akonadi-import-wizard
-  version: 24.08.3
+  version: 24.12.0
   build_version: 1
   tag: rtz
 - package: akonadi-mime
-  version: 24.08.3
+  version: 24.12.0
   build_version: 1
   tag: rtz
 - package: akonadi-notes
@@ -185,15 +185,15 @@
   build_version: 1
   tag: rtz
 - package: akonadi-search
-  version: 24.08.3
+  version: 24.12.0
   build_version: 1
   tag: rtz
 - package: akonadiconsole
-  version: 24.08.3
+  version: 24.12.0
   build_version: 1
   tag: rtz
 - package: akregator
-  version: 24.08.3
+  version: 24.12.0
   build_version: 1
   tag: rtz
 - package: alkimia
@@ -201,7 +201,7 @@
   build_version: 1
   tag: rtz
 - package: alligator
-  version: 24.08.3
+  version: 24.12.0
   build_version: 1
   tag: rtz
 - package: alpine
@@ -227,11 +227,15 @@
   version: 0.7.6
   build_version: 5
 - package: analitza
-  version: 24.08.3
+  version: 24.12.0
   build_version: 1
   tag: rtz
+- package: android-tools
+  version: 35.0.2
+  build_version: 1
+  tag: SBo
 - package: angelfish
-  version: 24.08.3
+  version: 24.12.0
   build_version: 1
   tag: rtz
 - package: anthy-unicode
@@ -257,8 +261,8 @@
   tag: rtz
 - package: appstream-glib
   version: 0.8.3
-  build_version: 1
-  tag: rtz
+  build_version: 2
+  tag: SBo
 - package: appstream-qt
   version: 1.0.3
   build_version: 1
@@ -281,11 +285,11 @@
   build_version: 1
   tag: rtz
 - package: arianna
-  version: 24.08.3
+  version: 24.12.0
   build_version: 1
   tag: rtz
 - package: ark
-  version: 24.08.3
+  version: 24.12.0
   build_version: 1
   tag: rtz
 - package: arp-scan
@@ -297,7 +301,7 @@
   build_version: 1
   tag: rtz
 - package: artikulate
-  version: 24.08.3
+  version: 24.12.0
   build_version: 1
   tag: rtz
 - package: asciinema
@@ -318,6 +322,10 @@
 - package: aspell-en
   version: 2020.12.07_0
   build_version: 1
+- package: asterisk
+  version: 20.11.0
+  build_version: 1
+  tag: rtz
 - package: at
   version: 3.2.5
   build_version: 1
@@ -335,7 +343,7 @@
   build_version: 1
   tag: rtz
 - package: attica
-  version: 6.8.0
+  version: 6.9.0
   build_version: 1
   tag: rtz
 - package: attica5
@@ -352,11 +360,11 @@
   version: 4.4.2
   build_version: 1
 - package: audex
-  version: 24.08.3
+  version: 24.12.0
   build_version: 1
   tag: rtz
 - package: audiocd-kio
-  version: 24.08.3
+  version: 24.12.0
   build_version: 1
   tag: rtz
 - package: audiofile
@@ -387,8 +395,7 @@
   tag: rtz
 - package: ayatana-ido
   version: 0.10.4
-  build_version: 1
-  tag: rtz
+  build_version: 1cf
 - package: babel-loader
   version: 9.1.3
   build_version: 1
@@ -397,16 +404,19 @@
   version: 0.1.110
   build_version: 1
 - package: baloo
-  version: 6.8.0
+  version: 6.9.0
   build_version: 1
   tag: rtz
 - package: baloo-widgets
-  version: 24.08.3
+  version: 24.12.0
   build_version: 1
   tag: rtz
 - package: bash
   version: 5.2.037
   build_version: 2
+- package: bash-completion
+  version: 2.15.0
+  build_version: 1
 - package: bat
   version: 0.24.0
   build_version: 3
@@ -430,7 +440,7 @@
   version: 11.1
   build_version: 5
 - package: bind
-  version: 9.20.3
+  version: 9.20.4
   build_version: 1
 - package: binutils
   version: 2.43.1
@@ -453,7 +463,7 @@
   version: 0.77
   build_version: 1
 - package: blinken
-  version: 24.08.3
+  version: 24.12.0
   build_version: 1
   tag: rtz
 - package: bluedevil
@@ -470,21 +480,21 @@
   version: 1.2
   build_version: 4
 - package: bluez-qt
-  version: 6.8.0
+  version: 6.9.0
   build_version: 1
   tag: rtz
 - package: bomber
-  version: 24.08.3
+  version: 24.12.0
   build_version: 1
   tag: rtz
 - package: boost
-  version: 1.86.0
-  build_version: 5
+  version: 1.87.0
+  build_version: 1
 - package: bootp
   version: 2.4.3
   build_version: 5
 - package: bovo
-  version: 24.08.3
+  version: 24.12.0
   build_version: 1
   tag: rtz
 - package: bpe
@@ -499,7 +509,7 @@
   build_version: 1
   tag: rtz
 - package: breeze-icons
-  version: 6.8.0
+  version: 6.9.0
   build_version: 1
   tag: rtz
 - package: bridge-utils
@@ -522,14 +532,14 @@
   version: 6.12
   build_version: 1
 - package: bubblewrap
-  version: 0.11.0
+  version: 0.9.0
   build_version: 1
-  tag: rtz
+  tag: gfs
 - package: bzip2
   version: 1.0.8
   build_version: 3
 - package: c-ares
-  version: 1.34.3
+  version: 1.34.4
   build_version: 1
 - package: ca-certificates
   version: 20241120
@@ -544,11 +554,11 @@
   version: 1.18.0
   build_version: 1
 - package: calendarsupport
-  version: 24.08.3
+  version: 24.12.0
   build_version: 1
   tag: rtz
 - package: calindori
-  version: 24.08.3
+  version: 24.12.0
   build_version: 1
   tag: rtz
 - package: callaudiod
@@ -560,7 +570,7 @@
   build_version: 1
   tag: rtz
 - package: cantor
-  version: 24.08.3
+  version: 24.12.0
   build_version: 1
   tag: rtz
 - package: cargo-c
@@ -586,12 +596,16 @@
   version: 3.02a09
   build_version: 1
 - package: cervisia
-  version: 24.08.3
+  version: 24.12.0
   build_version: 1
   tag: rtz
 - package: cfitsio
   version: 4.5.0
   build_version: 1
+- package: chafa
+  version: 1.14.5
+  build_version: 1
+  tag: SBo
 - package: check
   version: 0.15.2
   build_version: 3
@@ -604,6 +618,10 @@
 - package: cifs-utils
   version: 7.1
   build_version: 1
+- package: clalsadrv
+  version: 2.0.0
+  build_version: 1
+  tag: SBo
 - package: cldr-emoji-annotation
   version: 37.0_13.0_0_2
   build_version: 4
@@ -613,6 +631,10 @@
 - package: clisp
   version: 2.50_20230718_669249717
   build_version: 2
+- package: clthreads
+  version: 2.4.2
+  build_version: 1
+  tag: SBo
 - package: clucene
   version: 2.3.3.4
   build_version: 5
@@ -620,6 +642,10 @@
   version: 1.26.4
   build_version: 4
   tag: gfs
+- package: clxclient
+  version: 3.9.2
+  build_version: 1
+  tag: SBo
 - package: cmake
   version: 3.31.2
   build_version: 1
@@ -632,10 +658,10 @@
   build_version: 1
 - package: colord-gtk
   version: 0.3.1
-  build_version: 2
+  build_version: 1
   tag: gfs
 - package: colord-kde
-  version: 24.08.3
+  version: 24.12.0
   build_version: 1
   tag: rtz
 - package: compiz
@@ -658,7 +684,7 @@
   version: 2.15
   build_version: 1
 - package: cptn
-  version: 2.0.0
+  version: 2.2.1
   build_version: 1
   tag: rtz
 - package: cpufrequtils
@@ -669,7 +695,7 @@
   build_version: 1
 - package: cryfs
   version: 0.10.3
-  build_version: 13
+  build_version: 14
 - package: cryptopp
   version: 8.2.0
   build_version: 3
@@ -693,7 +719,7 @@
   version: 2.0.1
   build_version: 1
 - package: curl
-  version: 8.11.0
+  version: 8.11.1
   build_version: 1
 - package: cvs
   version: 1.11.23
@@ -777,6 +803,10 @@
 - package: diffutils
   version: 3.10
   build_version: 1
+- package: digikam
+  version: 8.4.0
+  build_version: 1
+  tag: rtz
 - package: dirac
   version: 1.0.2
   build_version: 4
@@ -804,6 +834,10 @@
 - package: dnsmasq
   version: 2.90
   build_version: 1
+- package: docbook-xml5
+  version: 5.0.0
+  build_version: 1
+  tag: SBo
 - package: docker
   version: 27.0.3
   build_version: 1alien
@@ -811,11 +845,11 @@
   version: 2.28.1
   build_version: 1alien
 - package: dolphin
-  version: 24.08.3
+  version: 24.12.0.1
   build_version: 1
   tag: rtz
 - package: dolphin-plugins
-  version: 24.08.3
+  version: 24.12.0
   build_version: 1
   tag: rtz
 - package: dos2unix
@@ -836,9 +870,9 @@
   build_version: 1
 - package: dracut
   version: 105
-  build_version: 1
+  build_version: 2
 - package: dragon
-  version: 24.08.3
+  version: 24.12.0
   build_version: 1
   tag: rtz
 - package: drkonqi
@@ -904,7 +938,7 @@
   version: 0.192
   build_version: 1
 - package: elisa
-  version: 24.08.3
+  version: 24.12.0
   build_version: 1
   tag: rtz
 - package: elm
@@ -938,8 +972,8 @@
   version: 0.2.41
   build_version: 5
 - package: espeak-ng
-  version: 1.51.1
-  build_version: 2
+  version: 1.52.0
+  build_version: 1
 - package: etc
   version: 15.1
   build_version: 12
@@ -950,7 +984,7 @@
   version: 3.2.14
   build_version: 2
 - package: eventviews
-  version: 24.08.3
+  version: 24.12.0
   build_version: 1
   tag: rtz
 - package: exfatprogs
@@ -960,8 +994,8 @@
   version: 0.28.3
   build_version: 1
 - package: exo
-  version: 4.18.0
-  build_version: 1
+  version: 4.20.0
+  build_version: 2
 - package: expat
   version: 2.6.4
   build_version: 1
@@ -969,7 +1003,7 @@
   version: 5.45.4
   build_version: 4
 - package: extra-cmake-modules
-  version: 6.8.0
+  version: 6.9.0
   build_version: 1
   tag: rtz
 - package: f2fs-tools
@@ -983,7 +1017,7 @@
   build_version: 1
   tag: SBo
 - package: falkon
-  version: 24.08.3
+  version: 24.12.0
   build_version: 1
   tag: rtz
 - package: farstream
@@ -998,7 +1032,7 @@
   build_version: 1
 - package: fcitx5-chinese-addons
   version: 5.1.7
-  build_version: 1
+  build_version: 2
 - package: fcitx5-configtool
   version: 5.1.7
   build_version: 1
@@ -1045,7 +1079,7 @@
   version: 2.2.3
   build_version: 1
 - package: ffmpegthumbs
-  version: 24.08.3
+  version: 24.12.0
   build_version: 1
   tag: rtz
 - package: fftw
@@ -1062,7 +1096,7 @@
   version: 5.46
   build_version: 1
 - package: filelight
-  version: 24.08.3
+  version: 24.12.0
   build_version: 1
   tag: rtz
 - package: findutils
@@ -1085,6 +1119,10 @@
 - package: floppy
   version: 5.5
   build_version: 4
+- package: fltk
+  version: 1.3.8
+  build_version: 2
+  tag: SBo
 - package: fluidsynth
   version: 2.4.1
   build_version: 1
@@ -1212,7 +1250,7 @@
   version: 1.2.4
   build_version: 1
 - package: frameworkintegration
-  version: 6.8.0
+  version: 6.9.0
   build_version: 1
   tag: rtz
 - package: frameworkintegration5
@@ -1220,7 +1258,7 @@
   build_version: 1
   tag: rtz
 - package: francis
-  version: 24.08.3
+  version: 24.12.0
   build_version: 1
   tag: rtz
 - package: freecell-solver
@@ -1232,6 +1270,10 @@
 - package: freerdp
   version: 2.11.7
   build_version: 2
+- package: freetds
+  version: 1.00.99
+  build_version: 2
+  tag: SBo
 - package: freetype
   version: 2.13.3
   build_version: 1
@@ -1261,7 +1303,7 @@
   version: 2.7.0
   build_version: 1
 - package: garcon
-  version: 4.18.2
+  version: 4.20.0
   build_version: 1
 - package: gawk
   version: 5.3.1
@@ -1272,7 +1314,7 @@
 - package: gcab
   version: 1.6
   build_version: 1
-  tag: rtz
+  tag: SBo
 - package: gcc
   version: 14.2.0
   build_version: 2
@@ -1335,9 +1377,9 @@
   version: 0.4.50
   build_version: 1
 - package: geoclue2
-  version: 2.6.0
-  build_version: 1
-  tag: SBo
+  version: 2.7.1
+  build_version: 2
+  tag: gfs
 - package: getmail
   version: 6.19.05
   build_version: 2
@@ -1364,12 +1406,16 @@
   version: 8.11
   build_version: 5
 - package: ghostwriter
-  version: 24.08.3
+  version: 24.12.0
   build_version: 1
   tag: rtz
 - package: gi-docgen
   version: 2024.1
   build_version: 2
+- package: giblib
+  version: 1.2.4
+  build_version: 6
+  tag: SBo
 - package: giflib
   version: 5.2.2
   build_version: 1
@@ -1384,7 +1430,7 @@
   build_version: 1
   tag: SBo
 - package: github-cli
-  version: 2.63.0
+  version: 2.63.2
   build_version: 1
   tag: SBo
 - package: gitify
@@ -1403,6 +1449,10 @@
 - package: glew
   version: 2.2.0
   build_version: 3
+- package: glfw3
+  version: 3.4
+  build_version: 1
+  tag: SBo
 - package: glib
   version: 1.2.10
   build_version: 9
@@ -1410,7 +1460,7 @@
   version: 2.80.0
   build_version: 1
 - package: glib2
-  version: 2.82.3
+  version: 2.82.4
   build_version: 1
 - package: glibc
   version: 2.40
@@ -1496,6 +1546,9 @@
   version: 1.0.8
   build_version: 2
   tag: SBo
+- package: goaccess
+  version: 1.9.3
+  build_version: 1cf
 - package: gobject-introspection
   version: 1.82.0
   build_version: 2
@@ -1536,22 +1589,22 @@
   build_version: 1
   tag: rtz
 - package: gpu-screen-recorder
-  version: r876.030947e
+  version: r928.a006261
   build_version: 1
   tag: rtz
 - package: granatier
-  version: 24.08.3
+  version: 24.12.0
   build_version: 1
   tag: rtz
 - package: grantlee
   version: 5.3.1
   build_version: 1
 - package: grantlee-editor
-  version: 24.08.3
+  version: 24.12.0
   build_version: 1
   tag: rtz
 - package: grantleetheme
-  version: 24.08.3
+  version: 24.12.0
   build_version: 1
   tag: rtz
 - package: graphene
@@ -1561,7 +1614,7 @@
   version: 1.3.14
   build_version: 3
 - package: graphviz
-  version: 12.1.2
+  version: 12.2.1
   build_version: 1
   tag: rtz
 - package: grep
@@ -1609,7 +1662,7 @@
   version: 1.24.10
   build_version: 1
 - package: gst-plugins-ugly
-  version: 1.24.7
+  version: 1.24.10
   build_version: 1cf
 - package: gstreamer
   version: 1.24.10
@@ -1629,6 +1682,9 @@
   build_version: 3
 - package: gtk+3
   version: 3.24.43
+  build_version: 1
+- package: gtk-layer-shell
+  version: 0.9.0
   build_version: 1
 - package: gtk4
   version: 4.16.7
@@ -1654,6 +1710,10 @@
 - package: guile
   version: 3.0.9
   build_version: 2
+- package: gulkan
+  version: 0.16.0
+  build_version: 1
+  tag: rtz
 - package: gutenprint
   version: 5.3.4
   build_version: 4
@@ -1664,7 +1724,11 @@
   version: 1.56.1
   build_version: 1
 - package: gwenview
-  version: 24.08.3
+  version: 24.12.0
+  build_version: 1
+  tag: rtz
+- package: gxr
+  version: 0.16.0
   build_version: 1
   tag: rtz
 - package: gyp
@@ -1760,8 +1824,8 @@
   version: 1.4.34
   build_version: 1
 - package: ibus-table
-  version: 1.17.8
-  build_version: 2
+  version: 1.17.9
+  build_version: 1
 - package: ibus-unikey
   version: 0.6.1
   build_version: 3
@@ -1790,7 +1854,7 @@
   version: 1.0pre4
   build_version: 5
 - package: igt-gpu-tools
-  version: 1.29
+  version: 1.30
   build_version: 1
 - package: imagemagick
   version: 7.1.1_41
@@ -1806,7 +1870,7 @@
   version: 0.8.1
   build_version: 1
 - package: incidenceeditor
-  version: 24.08.3
+  version: 24.12.0
   build_version: 1
   tag: rtz
 - package: indent
@@ -1856,7 +1920,7 @@
   version: 6.12.0
   build_version: 1
 - package: ipset
-  version: 7.22
+  version: 7.23
   build_version: 1
 - package: iptables
   version: 1.8.11
@@ -1883,14 +1947,14 @@
   version: 4.17.0
   build_version: 1
 - package: isoimagewriter
-  version: 24.08.3
+  version: 24.12.0
   build_version: 1
   tag: rtz
 - package: ispell
   version: 3.4.06
   build_version: 3
 - package: itinerary
-  version: 24.08.3
+  version: 24.12.0
   build_version: 1
   tag: rtz
 - package: itstool
@@ -1915,7 +1979,7 @@
   build_version: 1
 - package: javacc
   version: 7.0.10
-  build_version: 1
+  build_version: 2
   tag: SBo
 - package: javacpc
   version: 3.0.2
@@ -1933,6 +1997,10 @@
 - package: jmtpfs
   version: 0.5
   build_version: 3
+- package: jnv
+  version: 0.4.2
+  build_version: 1
+  tag: rtz
 - package: joe
   version: 4.6
   build_version: 5
@@ -1956,15 +2024,15 @@
   version: 1.0.5
   build_version: 4
 - package: juk
-  version: 24.08.3
+  version: 24.12.0
   build_version: 1
   tag: rtz
 - package: k3b
-  version: 24.08.3
+  version: 24.12.0
   build_version: 1
   tag: rtz
 - package: kaccounts-integration
-  version: 24.08.3
+  version: 24.12.0
   build_version: 1
   tag: rtz
 - package: kactivities
@@ -1982,55 +2050,55 @@
   build_version: 1
   tag: rtz
 - package: kaddressbook
-  version: 24.08.3
+  version: 24.12.0
   build_version: 1
   tag: rtz
 - package: kalarm
-  version: 24.08.3
+  version: 24.12.0
   build_version: 1
   tag: rtz
 - package: kalgebra
-  version: 24.08.3
+  version: 24.12.0
   build_version: 1
   tag: rtz
 - package: kalk
-  version: 24.08.3
+  version: 24.12.0
   build_version: 1
   tag: rtz
 - package: kalm
-  version: 24.08.3
+  version: 24.12.0
   build_version: 1
   tag: rtz
 - package: kalzium
-  version: 24.08.3
+  version: 24.12.0
   build_version: 1
   tag: rtz
 - package: kamera
-  version: 24.08.3
+  version: 24.12.0
   build_version: 1
   tag: rtz
 - package: kamoso
-  version: 24.08.3
+  version: 24.12.0
   build_version: 1
   tag: rtz
 - package: kanagram
-  version: 24.08.3
+  version: 24.12.0
   build_version: 1
   tag: rtz
 - package: kapidox
-  version: 6.8.0
+  version: 6.9.0
   build_version: 1
   tag: rtz
 - package: kapman
-  version: 24.08.3
+  version: 24.12.0
   build_version: 1
   tag: rtz
 - package: kapptemplate
-  version: 24.08.3
+  version: 24.12.0
   build_version: 1
   tag: rtz
 - package: karchive
-  version: 6.8.0
+  version: 6.9.0
   build_version: 1
   tag: rtz
 - package: karchive5
@@ -2038,19 +2106,19 @@
   build_version: 1
   tag: rtz
 - package: kasts
-  version: 24.08.3
+  version: 24.12.0
   build_version: 1
   tag: rtz
 - package: kate
-  version: 24.08.3
+  version: 24.12.0
   build_version: 1
   tag: rtz
 - package: katomic
-  version: 24.08.3
+  version: 24.12.0
   build_version: 1
   tag: rtz
 - package: kauth
-  version: 6.8.0
+  version: 6.9.0
   build_version: 1
   tag: rtz
 - package: kauth5
@@ -2058,22 +2126,22 @@
   build_version: 1
   tag: rtz
 - package: kbackup
-  version: 24.08.3
+  version: 24.12.0
   build_version: 1
   tag: rtz
 - package: kbd
-  version: 2.6.4
+  version: 2.7
   build_version: 1
 - package: kblackbox
-  version: 24.08.3
+  version: 24.12.0
   build_version: 1
   tag: rtz
 - package: kblocks
-  version: 24.08.3
+  version: 24.12.0
   build_version: 1
   tag: rtz
 - package: kbookmarks
-  version: 6.8.0
+  version: 6.9.0
   build_version: 1
   tag: rtz
 - package: kbookmarks5
@@ -2081,27 +2149,27 @@
   build_version: 1
   tag: rtz
 - package: kbounce
-  version: 24.08.3
+  version: 24.12.0
   build_version: 1
   tag: rtz
 - package: kbreakout
-  version: 24.08.3
+  version: 24.12.0
   build_version: 1
   tag: rtz
 - package: kbruch
-  version: 24.08.3
+  version: 24.12.0
   build_version: 1
   tag: rtz
 - package: kcachegrind
-  version: 24.08.3
+  version: 24.12.0
   build_version: 1
   tag: rtz
 - package: kcalc
-  version: 24.08.3
+  version: 24.12.0
   build_version: 1
   tag: rtz
 - package: kcalendarcore
-  version: 6.8.0
+  version: 6.9.0
   build_version: 1
   tag: rtz
 - package: kcalendarcore5
@@ -2109,19 +2177,19 @@
   build_version: 1
   tag: rtz
 - package: kcalutils
-  version: 24.08.3
+  version: 24.12.0
   build_version: 1
   tag: rtz
 - package: kcharselect
-  version: 24.08.3
+  version: 24.12.0
   build_version: 1
   tag: rtz
 - package: kclock
-  version: 24.08.3
+  version: 24.12.0
   build_version: 1
   tag: rtz
 - package: kcmutils
-  version: 6.8.0
+  version: 6.9.0
   build_version: 1
   tag: rtz
 - package: kcmutils5
@@ -2129,7 +2197,7 @@
   build_version: 1
   tag: rtz
 - package: kcodecs
-  version: 6.8.0
+  version: 6.9.0
   build_version: 1
   tag: rtz
 - package: kcodecs5
@@ -2137,7 +2205,7 @@
   build_version: 1
   tag: rtz
 - package: kcolorchooser
-  version: 24.08.3
+  version: 24.12.0
   build_version: 1
   tag: rtz
 - package: kcolorpicker
@@ -2145,11 +2213,11 @@
   build_version: 1
   tag: rtz
 - package: kcolorscheme
-  version: 6.8.0
+  version: 6.9.0
   build_version: 1
   tag: rtz
 - package: kcompletion
-  version: 6.8.0
+  version: 6.9.0
   build_version: 1
   tag: rtz
 - package: kcompletion5
@@ -2157,7 +2225,7 @@
   build_version: 1
   tag: rtz
 - package: kconfig
-  version: 6.8.0
+  version: 6.9.0
   build_version: 1
   tag: rtz
 - package: kconfig5
@@ -2165,7 +2233,7 @@
   build_version: 1
   tag: rtz
 - package: kconfigwidgets
-  version: 6.8.0
+  version: 6.9.0
   build_version: 1
   tag: rtz
 - package: kconfigwidgets5
@@ -2173,7 +2241,7 @@
   build_version: 1
   tag: rtz
 - package: kcontacts
-  version: 6.8.0
+  version: 6.9.0
   build_version: 1
   tag: rtz
 - package: kcontacts5
@@ -2181,7 +2249,7 @@
   build_version: 1
   tag: rtz
 - package: kcoreaddons
-  version: 6.8.0
+  version: 6.9.0
   build_version: 1
   tag: rtz
 - package: kcoreaddons5
@@ -2189,7 +2257,7 @@
   build_version: 1
   tag: rtz
 - package: kcrash
-  version: 6.8.0
+  version: 6.9.0
   build_version: 1
   tag: rtz
 - package: kcrash5
@@ -2197,15 +2265,15 @@
   build_version: 1
   tag: rtz
 - package: kcron
-  version: 24.08.3
+  version: 24.12.0
   build_version: 1
   tag: rtz
 - package: kdav
-  version: 6.8.0
+  version: 6.9.0
   build_version: 1
   tag: rtz
 - package: kdbusaddons
-  version: 6.8.0
+  version: 6.9.0
   build_version: 1
   tag: rtz
 - package: kdbusaddons5
@@ -2217,11 +2285,11 @@
   build_version: 1
   tag: rtz
 - package: kde-dev-scripts
-  version: 24.08.3
+  version: 24.12.0
   build_version: 1
   tag: rtz
 - package: kde-dev-utils
-  version: 24.08.3
+  version: 24.12.0
   build_version: 1
   tag: rtz
 - package: kde-gtk-config
@@ -2229,15 +2297,15 @@
   build_version: 1
   tag: rtz
 - package: kde-inotify-survey
-  version: 24.08.3
+  version: 24.12.0
   build_version: 1
   tag: rtz
 - package: kdebugsettings
-  version: 24.08.3
+  version: 24.12.0
   build_version: 1
   tag: rtz
 - package: kdeclarative
-  version: 6.8.0
+  version: 6.9.0
   build_version: 1
   tag: rtz
 - package: kdeclarative5
@@ -2245,7 +2313,7 @@
   build_version: 1
   tag: rtz
 - package: kdeconnect
-  version: 24.08.3
+  version: 24.12.0
   build_version: 1
   tag: rtz
 - package: kdecoration
@@ -2253,35 +2321,35 @@
   build_version: 1
   tag: rtz
 - package: kded
-  version: 6.8.0
+  version: 6.9.0
   build_version: 1
   tag: rtz
 - package: kdeedu-data
-  version: 24.08.3
+  version: 24.12.0
   build_version: 1
   tag: rtz
 - package: kdegraphics-mobipocket
-  version: 24.08.3
+  version: 24.12.0
   build_version: 1
   tag: rtz
 - package: kdegraphics-thumbnailers
-  version: 24.08.3
+  version: 24.12.0
   build_version: 1
   tag: rtz
 - package: kdenetwork-filesharing
-  version: 24.08.3
+  version: 24.12.0
   build_version: 1
   tag: rtz
 - package: kdenlive
-  version: 24.08.3
+  version: 24.12.0
   build_version: 1
   tag: rtz
 - package: kdepim-addons
-  version: 24.08.3
+  version: 24.12.0
   build_version: 1
   tag: rtz
 - package: kdepim-runtime
-  version: 24.08.3
+  version: 24.12.0
   build_version: 1
   tag: rtz
 - package: kdeplasma-addons
@@ -2289,23 +2357,35 @@
   build_version: 1
   tag: rtz
 - package: kdesdk-kio
-  version: 24.08.3
+  version: 24.12.0
   build_version: 1
   tag: rtz
 - package: kdesdk-thumbnailers
-  version: 24.08.3
+  version: 24.12.0
   build_version: 1
   tag: rtz
 - package: kdesu
-  version: 6.8.0
+  version: 6.9.0
   build_version: 1
   tag: rtz
 - package: kdesu5
   version: 5.116.0
   build_version: 1
   tag: rtz
+- package: kdev-python
+  version: 24.12.0
+  build_version: 1
+  tag: rtz
+- package: kdevelop
+  version: 24.12.0
+  build_version: 1
+  tag: rtz
+- package: kdevelop-pg-qt
+  version: 2.3.0
+  build_version: 1
+  tag: rtz
 - package: kdf
-  version: 24.08.3
+  version: 24.12.0
   build_version: 1
   tag: rtz
 - package: kdiagram
@@ -2317,15 +2397,15 @@
   build_version: 1
   tag: rtz
 - package: kdialog
-  version: 24.08.3
+  version: 24.12.0
   build_version: 1
   tag: rtz
 - package: kdiamond
-  version: 24.08.3
+  version: 24.12.0
   build_version: 1
   tag: rtz
 - package: kdnssd
-  version: 6.8.0
+  version: 6.9.0
   build_version: 1
   tag: rtz
 - package: kdnssd5
@@ -2333,7 +2413,7 @@
   build_version: 1
   tag: rtz
 - package: kdoctools
-  version: 6.8.0
+  version: 6.9.0
   build_version: 1
   tag: rtz
 - package: kdoctools5
@@ -2352,7 +2432,7 @@
   build_version: 1
   tag: rtz
 - package: keditbookmarks
-  version: 24.08.3
+  version: 24.12.0
   build_version: 1
   tag: rtz
 - package: kemoticons
@@ -2363,29 +2443,29 @@
   build_version: 1
   tag: rtz
 - package: kernel-firmware
-  version: 20241209_633e866
+  version: 20241219_b3300bb
   build_version: 1
 - package: kernel-generic
-  version: 6.12.4
+  version: 6.12.6
   build_version: 1
 - package: kernel-headers
-  version: 6.12.4
+  version: 6.12.6
   build_version: 1
 - package: kernel-source
-  version: 6.12.4
+  version: 6.12.6
   build_version: 1
 - package: keybinder3
   version: 3.0_0.3.2
   build_version: 3
 - package: keysmith
-  version: 24.08.3
+  version: 24.12.0
   build_version: 1
   tag: rtz
 - package: keyutils
   version: 1.6.3
   build_version: 3
 - package: kfilemetadata
-  version: 6.8.0
+  version: 6.9.0
   build_version: 1
   tag: rtz
 - package: kfilemetadata5
@@ -2393,11 +2473,11 @@
   build_version: 1
   tag: rtz
 - package: kfind
-  version: 24.08.3
+  version: 24.12.0
   build_version: 1
   tag: rtz
 - package: kfourinline
-  version: 24.08.3
+  version: 24.12.0
   build_version: 1
   tag: rtz
 - package: kgamma
@@ -2405,15 +2485,15 @@
   build_version: 1
   tag: rtz
 - package: kgeography
-  version: 24.08.3
+  version: 24.12.0
   build_version: 1
   tag: rtz
 - package: kget
-  version: 24.08.3
+  version: 24.12.0
   build_version: 1
   tag: rtz
 - package: kglobalaccel
-  version: 6.8.0
+  version: 6.9.0
   build_version: 1
   tag: rtz
 - package: kglobalaccel5
@@ -2425,11 +2505,11 @@
   build_version: 1
   tag: rtz
 - package: kgoldrunner
-  version: 24.08.3
+  version: 24.12.0
   build_version: 1
   tag: rtz
 - package: kgpg
-  version: 24.08.3
+  version: 24.12.0
   build_version: 1
   tag: rtz
 - package: kgraphviewer
@@ -2437,7 +2517,7 @@
   build_version: 1
   tag: rtz
 - package: kguiaddons
-  version: 6.8.0
+  version: 6.9.0
   build_version: 1
   tag: rtz
 - package: kguiaddons5
@@ -2445,19 +2525,19 @@
   build_version: 1
   tag: rtz
 - package: khangman
-  version: 24.08.3
+  version: 24.12.0
   build_version: 1
   tag: rtz
 - package: khealthcertificate
-  version: 24.08.3
+  version: 24.12.0
   build_version: 1
   tag: rtz
 - package: khelpcenter
-  version: 24.08.3
+  version: 24.12.0
   build_version: 1
   tag: rtz
 - package: kholidays
-  version: 6.8.0
+  version: 6.9.0
   build_version: 1
   tag: rtz
 - package: kholidays5
@@ -2471,7 +2551,7 @@
   version: 5.116.0
   build_version: 1
 - package: ki18n
-  version: 6.8.0
+  version: 6.9.0
   build_version: 1
   tag: rtz
 - package: ki18n5
@@ -2479,7 +2559,7 @@
   build_version: 1
   tag: rtz
 - package: kiconthemes
-  version: 6.8.0
+  version: 6.9.0
   build_version: 1
   tag: rtz
 - package: kiconthemes5
@@ -2491,11 +2571,11 @@
   build_version: 1
   tag: rtz
 - package: kidentitymanagement
-  version: 24.08.3
+  version: 24.12.0
   build_version: 1
   tag: rtz
 - package: kidletime
-  version: 6.8.0
+  version: 6.9.0
   build_version: 1
   tag: rtz
 - package: kidletime5
@@ -2503,15 +2583,15 @@
   build_version: 1
   tag: rtz
 - package: kig
-  version: 24.08.3
+  version: 24.12.0
   build_version: 1
   tag: rtz
 - package: kigo
-  version: 24.08.3
+  version: 24.12.0
   build_version: 1
   tag: rtz
 - package: killbots
-  version: 24.08.3
+  version: 24.12.0
   build_version: 1
   tag: rtz
 - package: kimageannotator
@@ -2519,15 +2599,15 @@
   build_version: 1
   tag: rtz
 - package: kimageformats
-  version: 6.8.0
+  version: 6.9.0
   build_version: 1
   tag: rtz
 - package: kimagemapeditor
-  version: 24.08.3
+  version: 24.12.0
   build_version: 1
   tag: rtz
 - package: kimap
-  version: 24.08.3
+  version: 24.12.0
   build_version: 1
   tag: rtz
 - package: kinfocenter
@@ -2542,15 +2622,15 @@
   build_version: 1
   tag: rtz
 - package: kio
-  version: 6.8.0
+  version: 6.9.0
   build_version: 1
   tag: rtz
 - package: kio-admin
-  version: 24.08.3
+  version: 24.12.0
   build_version: 1
   tag: rtz
 - package: kio-extras
-  version: 24.08.3
+  version: 24.12.0
   build_version: 1
   tag: rtz
 - package: kio-fuse
@@ -2558,11 +2638,11 @@
   build_version: 1
   tag: rtz
 - package: kio-gdrive
-  version: 24.08.3
+  version: 24.12.0
   build_version: 1
   tag: rtz
 - package: kio-zeroconf
-  version: 24.08.3
+  version: 24.12.0
   build_version: 1
   tag: rtz
 - package: kio5
@@ -2573,7 +2653,7 @@
   version: 23.08.5
   build_version: 1
 - package: kirigami
-  version: 6.8.0
+  version: 6.9.0
   build_version: 1
   tag: rtz
 - package: kirigami-addons
@@ -2585,7 +2665,7 @@
   build_version: 1
   tag: rtz
 - package: kirigami-gallery
-  version: 24.08.3
+  version: 24.12.0
   build_version: 1
   tag: rtz
 - package: kirigami2
@@ -2593,7 +2673,7 @@
   build_version: 1
   tag: rtz
 - package: kiriki
-  version: 24.08.3
+  version: 24.12.0
   build_version: 1
   tag: rtz
 - package: kirogi
@@ -2601,7 +2681,7 @@
   build_version: 1
   tag: rtz
 - package: kitemmodels
-  version: 6.8.0
+  version: 6.9.0
   build_version: 1
   tag: rtz
 - package: kitemmodels5
@@ -2609,7 +2689,7 @@
   build_version: 1
   tag: rtz
 - package: kitemviews
-  version: 6.8.0
+  version: 6.9.0
   build_version: 1
   tag: rtz
 - package: kitemviews5
@@ -2617,15 +2697,15 @@
   build_version: 1
   tag: rtz
 - package: kiten
-  version: 24.08.3
+  version: 24.12.0
   build_version: 1
   tag: rtz
 - package: kitinerary
-  version: 24.08.3
+  version: 24.12.0
   build_version: 1
   tag: rtz
 - package: kjobwidgets
-  version: 6.8.0
+  version: 6.9.0
   build_version: 1
   tag: rtz
 - package: kjobwidgets5
@@ -2639,19 +2719,19 @@
   version: 5.116.0
   build_version: 1
 - package: kjumpingcube
-  version: 24.08.3
+  version: 24.12.0
   build_version: 1
   tag: rtz
 - package: kldap
-  version: 24.08.3
+  version: 24.12.0
   build_version: 1
   tag: rtz
 - package: kleopatra
-  version: 24.08.3
+  version: 24.12.0
   build_version: 1
   tag: rtz
 - package: klettres
-  version: 24.08.3
+  version: 24.12.0
   build_version: 1
   tag: rtz
 - package: klevernotes
@@ -2659,35 +2739,35 @@
   build_version: 1
   tag: rtz
 - package: klickety
-  version: 24.08.3
+  version: 24.12.0
   build_version: 1
   tag: rtz
 - package: klines
-  version: 24.08.3
+  version: 24.12.0
   build_version: 1
   tag: rtz
 - package: kmag
-  version: 24.08.3
+  version: 24.12.0
   build_version: 1
   tag: rtz
 - package: kmahjongg
-  version: 24.08.3
+  version: 24.12.0
   build_version: 1
   tag: rtz
 - package: kmail
-  version: 24.08.3
+  version: 24.12.0
   build_version: 1
   tag: rtz
 - package: kmail-account-wizard
-  version: 24.08.3
+  version: 24.12.0
   build_version: 1
   tag: rtz
 - package: kmailtransport
-  version: 24.08.3
+  version: 24.12.0
   build_version: 1
   tag: rtz
 - package: kmbox
-  version: 24.08.3
+  version: 24.12.0
   build_version: 1
   tag: rtz
 - package: kmediaplayer
@@ -2698,15 +2778,15 @@
   build_version: 1
   tag: rtz
 - package: kmime
-  version: 24.08.3
+  version: 24.12.0
   build_version: 1
   tag: rtz
 - package: kmines
-  version: 24.08.3
+  version: 24.12.0
   build_version: 1
   tag: rtz
 - package: kmix
-  version: 24.08.3
+  version: 24.12.0
   build_version: 1
   tag: rtz
 - package: kmod
@@ -2717,15 +2797,15 @@
   build_version: 1
   tag: rtz
 - package: kmousetool
-  version: 24.08.3
+  version: 24.12.0
   build_version: 1
   tag: rtz
 - package: kmouth
-  version: 24.08.3
+  version: 24.12.0
   build_version: 1
   tag: rtz
 - package: kmplot
-  version: 24.08.3
+  version: 24.12.0
   build_version: 1
   tag: rtz
 - package: kmymoney
@@ -2733,15 +2813,15 @@
   build_version: 1
   tag: rtz
 - package: knavalbattle
-  version: 24.08.3
+  version: 24.12.0
   build_version: 1
   tag: rtz
 - package: knetwalk
-  version: 24.08.3
+  version: 24.12.0
   build_version: 1
   tag: rtz
 - package: knewstuff
-  version: 6.8.0
+  version: 6.9.0
   build_version: 1
   tag: rtz
 - package: knewstuff5
@@ -2749,14 +2829,14 @@
   build_version: 1
   tag: rtz
 - package: knights
-  version: 24.08.3
+  version: 24.12.0
   build_version: 1
   tag: rtz
 - package: knotes
   version: 23.08.5
   build_version: 1
 - package: knotifications
-  version: 6.8.0
+  version: 6.9.0
   build_version: 1
   tag: rtz
 - package: knotifications5
@@ -2764,7 +2844,7 @@
   build_version: 1
   tag: rtz
 - package: knotifyconfig
-  version: 6.8.0
+  version: 6.9.0
   build_version: 1
   tag: rtz
 - package: knotifyconfig5
@@ -2772,19 +2852,19 @@
   build_version: 1
   tag: rtz
 - package: koko
-  version: 24.08.3
+  version: 24.12.0
   build_version: 1
   tag: rtz
 - package: kolf
-  version: 24.08.3
+  version: 24.12.0
   build_version: 1
   tag: rtz
 - package: kollision
-  version: 24.08.3
+  version: 24.12.0
   build_version: 1
   tag: rtz
 - package: kolourpaint
-  version: 24.08.3
+  version: 24.12.0
   build_version: 1
   tag: rtz
 - package: kommit
@@ -2792,58 +2872,58 @@
   build_version: 1
   tag: rtz
 - package: kompare
-  version: 24.08.3
+  version: 24.12.0
   build_version: 1
   tag: rtz
 - package: kongress
-  version: 24.08.3
+  version: 24.12.0
   build_version: 1
   tag: rtz
 - package: konqueror
-  version: 24.08.3
+  version: 24.12.0
   build_version: 1
   tag: rtz
 - package: konquest
-  version: 24.08.3
+  version: 24.12.0
   build_version: 1
   tag: rtz
 - package: konsole
-  version: 24.08.3
+  version: 24.12.0
   build_version: 1
   tag: rtz
 - package: kontact
-  version: 24.08.3
+  version: 24.12.0
   build_version: 1
   tag: rtz
 - package: kontactinterface
-  version: 24.08.3
+  version: 24.12.0
   build_version: 1
   tag: rtz
 - package: kontrast
-  version: 24.08.3
+  version: 24.12.0
   build_version: 1
   tag: rtz
 - package: konversation
-  version: 24.08.3
+  version: 24.12.0
   build_version: 1
   tag: rtz
 - package: kopeninghours
-  version: 24.08.3
+  version: 24.12.0
   build_version: 1
   tag: rtz
 - package: kopete
   version: 23.08.5
   build_version: 1
 - package: korganizer
-  version: 24.08.3
+  version: 24.12.0
   build_version: 1
   tag: rtz
 - package: kosmindoormap
-  version: 24.08.3
+  version: 24.12.0
   build_version: 1
   tag: rtz
 - package: kpackage
-  version: 6.8.0
+  version: 6.9.0
   build_version: 1
   tag: rtz
 - package: kpackage5
@@ -2851,7 +2931,7 @@
   build_version: 1
   tag: rtz
 - package: kparts
-  version: 6.8.0
+  version: 6.9.0
   build_version: 1
   tag: rtz
 - package: kparts5
@@ -2859,11 +2939,11 @@
   build_version: 1
   tag: rtz
 - package: kpat
-  version: 24.08.3
+  version: 24.12.0
   build_version: 1
   tag: rtz
 - package: kpeople
-  version: 6.8.0
+  version: 6.9.0
   build_version: 1
   tag: rtz
 - package: kpeople5
@@ -2874,8 +2954,12 @@
   version: 0.1
   build_version: 1
   tag: rtz
+- package: kphotoalbum
+  version: 6.0.0
+  build_version: 1
+  tag: rtz
 - package: kpimtextedit
-  version: 24.08.3
+  version: 24.12.0
   build_version: 1
   tag: rtz
 - package: kpipewire
@@ -2883,11 +2967,11 @@
   build_version: 1
   tag: rtz
 - package: kpkpass
-  version: 24.08.3
+  version: 24.12.0
   build_version: 1
   tag: rtz
 - package: kplotting
-  version: 6.8.0
+  version: 6.9.0
   build_version: 1
   tag: rtz
 - package: kplotting5
@@ -2895,11 +2979,11 @@
   build_version: 1
   tag: rtz
 - package: kpmcore
-  version: 24.08.3
+  version: 24.12.0
   build_version: 1
   tag: rtz
 - package: kpty
-  version: 6.8.0
+  version: 6.9.0
   build_version: 1
   tag: rtz
 - package: kpty5
@@ -2907,15 +2991,15 @@
   build_version: 1
   tag: rtz
 - package: kpublictransport
-  version: 24.08.3
+  version: 24.12.0
   build_version: 1
   tag: rtz
 - package: kqtquickcharts
-  version: 24.08.3
+  version: 24.12.0
   build_version: 1
   tag: rtz
 - package: kquickcharts
-  version: 6.8.0
+  version: 6.9.0
   build_version: 1
   tag: rtz
 - package: kquickimageeditor
@@ -2926,7 +3010,7 @@
   version: 1.21.3
   build_version: 1
 - package: krdc
-  version: 24.08.3
+  version: 24.12.0
   build_version: 1
   tag: rtz
 - package: krdp
@@ -2938,18 +3022,18 @@
   build_version: 1
   tag: rtz
 - package: krfb
-  version: 24.08.3
+  version: 24.12.0
   build_version: 1
   tag: rtz
 - package: kross
   version: 5.116.0
   build_version: 1
 - package: kruler
-  version: 24.08.3
+  version: 24.12.0
   build_version: 1
   tag: rtz
 - package: krunner
-  version: 6.8.0
+  version: 6.9.0
   build_version: 1
   tag: rtz
 - package: krunner5
@@ -2961,7 +3045,7 @@
   build_version: 1
   tag: rtz
 - package: ksanecore
-  version: 24.08.3
+  version: 24.12.0
   build_version: 1
   tag: rtz
 - package: kscreen
@@ -2973,7 +3057,7 @@
   build_version: 1
   tag: rtz
 - package: kservice
-  version: 6.8.0
+  version: 6.9.0
   build_version: 1
   tag: rtz
 - package: kservice5
@@ -2984,11 +3068,11 @@
   version: 1.0.10
   build_version: 1
 - package: ksirk
-  version: 24.08.3
+  version: 24.12.0
   build_version: 1
   tag: rtz
 - package: ksmtp
-  version: 24.08.3
+  version: 24.12.0
   build_version: 1
   tag: rtz
 - package: ksshaskpass
@@ -2996,15 +3080,15 @@
   build_version: 1
   tag: rtz
 - package: kstatusnotifieritem
-  version: 6.8.0
+  version: 6.9.0
   build_version: 1
   tag: rtz
 - package: ksvg
-  version: 6.8.0
+  version: 6.9.0
   build_version: 1
   tag: rtz
 - package: ksystemlog
-  version: 24.08.3
+  version: 24.12.0
   build_version: 1
   tag: rtz
 - package: ksystemstats
@@ -3012,7 +3096,7 @@
   build_version: 1
   tag: rtz
 - package: kteatime
-  version: 24.08.3
+  version: 24.12.0
   build_version: 1
   tag: rtz
 - package: ktextaddons
@@ -3020,7 +3104,7 @@
   build_version: 1
   tag: rtz
 - package: ktexteditor
-  version: 6.8.0
+  version: 6.9.0
   build_version: 1
   tag: rtz
 - package: ktexteditor5
@@ -3028,11 +3112,11 @@
   build_version: 1
   tag: rtz
 - package: ktexttemplate
-  version: 6.8.0
+  version: 6.9.0
   build_version: 1
   tag: rtz
 - package: ktextwidgets
-  version: 6.8.0
+  version: 6.9.0
   build_version: 1
   tag: rtz
 - package: ktextwidgets5
@@ -3040,7 +3124,7 @@
   build_version: 1
   tag: rtz
 - package: ktimer
-  version: 24.08.3
+  version: 24.12.0
   build_version: 1
   tag: rtz
 - package: ktimetracker
@@ -3048,27 +3132,27 @@
   build_version: 1
   tag: rtz
 - package: ktnef
-  version: 24.08.3
+  version: 24.12.0
   build_version: 1
   tag: rtz
 - package: ktorrent
-  version: 24.08.3
+  version: 24.12.0
   build_version: 1
   tag: rtz
 - package: ktouch
-  version: 24.08.3
+  version: 24.12.0
   build_version: 1
   tag: rtz
 - package: ktrip
-  version: 24.08.3
+  version: 24.12.0
   build_version: 1
   tag: rtz
 - package: kturtle
-  version: 24.08.3
+  version: 24.12.0
   build_version: 1
   tag: rtz
 - package: kunitconversion
-  version: 6.8.0
+  version: 6.9.0
   build_version: 1
   tag: rtz
 - package: kup
@@ -3076,7 +3160,7 @@
   build_version: 1
   tag: rtz
 - package: kuserfeedback
-  version: 6.8.0
+  version: 6.9.0
   build_version: 1
   tag: rtz
 - package: kvazaar
@@ -3084,7 +3168,7 @@
   build_version: 1
   tag: SBo
 - package: kwallet
-  version: 6.8.0
+  version: 6.9.0
   build_version: 1
   tag: rtz
 - package: kwallet-pam
@@ -3096,11 +3180,11 @@
   build_version: 1
   tag: rtz
 - package: kwalletmanager
-  version: 24.08.3
+  version: 24.12.0
   build_version: 1
   tag: rtz
 - package: kwave
-  version: 24.08.3
+  version: 24.12.0
   build_version: 1
   tag: rtz
 - package: kwayland
@@ -3116,7 +3200,7 @@
   build_version: 1
   tag: rtz
 - package: kweather
-  version: 24.08.3
+  version: 24.12.0
   build_version: 1
   tag: rtz
 - package: kweathercore
@@ -3124,7 +3208,7 @@
   build_version: 1
   tag: rtz
 - package: kwidgetsaddons
-  version: 6.8.0
+  version: 6.9.0
   build_version: 1
   tag: rtz
 - package: kwidgetsaddons5
@@ -3136,7 +3220,7 @@
   build_version: 1
   tag: rtz
 - package: kwindowsystem
-  version: 6.8.0
+  version: 6.9.0
   build_version: 1
   tag: rtz
 - package: kwindowsystem5
@@ -3144,11 +3228,11 @@
   build_version: 1
   tag: rtz
 - package: kwordquiz
-  version: 24.08.3
+  version: 24.12.0
   build_version: 1
   tag: rtz
 - package: kwrite
-  version: 24.08.3
+  version: 24.12.0
   build_version: 1
   tag: rtz
 - package: kwrited
@@ -3156,7 +3240,7 @@
   build_version: 1
   tag: rtz
 - package: kxmlgui
-  version: 6.8.0
+  version: 6.9.0
   build_version: 1
   tag: rtz
 - package: kxmlgui5
@@ -3165,6 +3249,9 @@
   tag: rtz
 - package: kxmlrpcclient
   version: 5.116.0
+  build_version: 1
+- package: labwc
+  version: 0.8.2
   build_version: 1
 - package: lager
   version: 0.1.1
@@ -3208,10 +3295,10 @@
   version: 1.0.10
   build_version: 1
 - package: libICE
-  version: 1.1.1
+  version: 1.1.2
   build_version: 1
 - package: libSM
-  version: 1.2.4
+  version: 1.2.5
   build_version: 1
 - package: libX11
   version: 1.8.10
@@ -3220,7 +3307,7 @@
   version: 1.2.4
   build_version: 1
 - package: libXau
-  version: 1.0.11
+  version: 1.0.12
   build_version: 1
 - package: libXaw
   version: 1.0.16
@@ -3286,7 +3373,7 @@
   version: 1.5.4
   build_version: 1
 - package: libXrender
-  version: 0.9.11
+  version: 0.9.12
   build_version: 1
 - package: libXres
   version: 1.2.2
@@ -3298,7 +3385,7 @@
   version: 1.2.5
   build_version: 1
 - package: libXv
-  version: 1.0.12
+  version: 1.0.13
   build_version: 1
 - package: libXvMC
   version: 1.0.14
@@ -3310,7 +3397,7 @@
   version: 1.0.4
   build_version: 3
 - package: libXxf86vm
-  version: 1.1.5
+  version: 1.1.6
   build_version: 1
 - package: libaccounts-glib
   version: 1.27
@@ -3411,7 +3498,7 @@
   version: 0.41
   build_version: 11
 - package: libclc
-  version: 19.1.5
+  version: 19.1.6
   build_version: 1
 - package: libconfig
   version: 1.7.3
@@ -3449,7 +3536,7 @@
   build_version: 1
   tag: SBo
 - package: libdeflate
-  version: 1.22
+  version: 1.23
   build_version: 1
 - package: libdex
   version: 0.6.1
@@ -3461,7 +3548,6 @@
 - package: libdisplay-info
   version: 0.2.0
   build_version: 1
-  tag: rtz
 - package: libdmtx
   version: 0.7.7
   build_version: 1
@@ -3558,7 +3644,7 @@
   version: 0.8.3
   build_version: 13
 - package: libgravatar
-  version: 24.08.3
+  version: 24.12.0
   build_version: 1
   tag: rtz
 - package: libgsf
@@ -3603,7 +3689,7 @@
   build_version: 8
 - package: libime
   version: 1.1.9
-  build_version: 1
+  build_version: 2
 - package: libimobiledevice
   version: 20231007_04c0233
   build_version: 2
@@ -3624,10 +3710,10 @@
   version: 3.52.16
   build_version: 1
 - package: libjpeg-turbo
-  version: 3.0.4
+  version: 3.1.0
   build_version: 1
 - package: libjxl
-  version: 0.11.0
+  version: 0.11.1
   build_version: 1
   tag: SBo
 - package: libkarma
@@ -3638,35 +3724,35 @@
   build_version: 3
   tag: SBo
 - package: libkcddb
-  version: 24.08.3
+  version: 24.12.0
   build_version: 1
   tag: rtz
 - package: libkcompactdisc
-  version: 24.08.3
+  version: 24.12.0
   build_version: 1
   tag: rtz
 - package: libkdcraw
-  version: 24.08.3
+  version: 24.12.0
   build_version: 1
   tag: rtz
 - package: libkdegames
-  version: 24.08.3
+  version: 24.12.0
   build_version: 1
   tag: rtz
 - package: libkdepim
-  version: 24.08.3
+  version: 24.12.0
   build_version: 1
   tag: rtz
 - package: libkeduvocdocument
-  version: 24.08.3
+  version: 24.12.0
   build_version: 1
   tag: rtz
 - package: libkexiv2
-  version: 24.08.3
+  version: 24.12.0
   build_version: 1
   tag: rtz
 - package: libkgapi
-  version: 24.08.3
+  version: 24.12.0
   build_version: 1
   tag: rtz
 - package: libkipi
@@ -3679,19 +3765,19 @@
   version: 0.2.7
   build_version: 5
 - package: libkleo
-  version: 24.08.3
+  version: 24.12.0
   build_version: 1
   tag: rtz
 - package: libkmahjongg
-  version: 24.08.3
+  version: 24.12.0
   build_version: 1
   tag: rtz
 - package: libkomparediff2
-  version: 24.08.3
+  version: 24.12.0
   build_version: 1
   tag: rtz
 - package: libksane
-  version: 24.08.3
+  version: 24.12.0
   build_version: 1
   tag: rtz
 - package: libksba
@@ -3702,7 +3788,7 @@
   build_version: 1
   tag: rtz
 - package: libksieve
-  version: 24.08.3
+  version: 24.12.0
   build_version: 1
   tag: rtz
 - package: libksysguard
@@ -3710,12 +3796,15 @@
   build_version: 1
   tag: rtz
 - package: libktorrent
-  version: 24.08.3
+  version: 24.12.0
   build_version: 1
   tag: rtz
 - package: libmad
   version: 0.15.1b
   build_version: 6
+- package: libmaxminddb
+  version: 1.11.0
+  build_version: 1cf
 - package: libmbim
   version: 1.30.0
   build_version: 1
@@ -3748,8 +3837,7 @@
   build_version: 1
 - package: libmpeg2
   version: 0.5.1
-  build_version: 2
-  tag: SBo
+  build_version: 7cf
 - package: libmtp
   version: 1.1.22
   build_version: 1
@@ -3832,6 +3920,10 @@
 - package: libodfgen
   version: 0.1.8
   build_version: 3
+- package: libofx
+  version: 0.9.11
+  build_version: 2
+  tag: SBo
 - package: libogg
   version: 1.3.5
   build_version: 1
@@ -3882,8 +3974,8 @@
   version: 1.6.44
   build_version: 1
 - package: libportal
-  version: 0.8.1
-  build_version: 1
+  version: 0.7.1
+  build_version: 2
   tag: gfs
 - package: libppd
   version: 2.1.0
@@ -3917,7 +4009,7 @@
   version: 1.2.2
   build_version: 1
 - package: libquotient
-  version: 0.8.2
+  version: 0.9.1
   build_version: 1
   tag: rtz
 - package: libraw1394
@@ -3947,6 +4039,9 @@
   build_version: 1
 - package: libsecret
   version: 0.21.4
+  build_version: 1
+- package: libsfdo
+  version: 0.1.3
   build_version: 1
 - package: libshout
   version: 2.4.5
@@ -4017,6 +4112,12 @@
 - package: libtool
   version: 2.5.4
   build_version: 1
+- package: libtraceevent
+  version: 1.8.4
+  build_version: 2
+- package: libtracefs
+  version: 1.8.1
+  build_version: 2
 - package: libunibreak
   version: 6.1
   build_version: 1
@@ -4027,7 +4128,7 @@
   version: 1.8.1
   build_version: 1
 - package: libupnp
-  version: 1.14.19
+  version: 1.14.20
   build_version: 1cf
 - package: liburing
   version: 2.8
@@ -4041,6 +4142,10 @@
 - package: libusbmuxd
   version: 20230901_30e678d
   build_version: 1
+- package: libusbsio
+  version: 2.1.13
+  build_version: 1
+  tag: rtz
 - package: libuv
   version: 1.49.2
   build_version: 1
@@ -4096,7 +4201,7 @@
 - package: libwpe
   version: 1.16.0
   build_version: 1
-  tag: SBo
+  tag: gfs
 - package: libwpg
   version: 0.3.4
   build_version: 1
@@ -4107,13 +4212,16 @@
   version: 1.17.0
   build_version: 1
 - package: libxcvt
-  version: 0.1.2
+  version: 0.1.3
   build_version: 1
 - package: libxfce4ui
-  version: 4.18.6
-  build_version: 1
+  version: 4.20.0
+  build_version: 2
 - package: libxfce4util
-  version: 4.18.2
+  version: 4.20.0
+  build_version: 1
+- package: libxfce4windowing
+  version: 4.20.0
   build_version: 1
 - package: libxkbcommon
   version: 1.7.0
@@ -4128,11 +4236,11 @@
   version: 2.13.5
   build_version: 2
 - package: libxmlb
-  version: 0.3.21
+  version: 0.3.17
   build_version: 1
-  tag: rtz
+  tag: gfs
 - package: libxshmfence
-  version: 1.3.2
+  version: 1.3.3
   build_version: 1
 - package: libxslt
   version: 1.1.42
@@ -4153,7 +4261,7 @@
   tag: rtz
 - package: lilo
   version: 24.2
-  build_version: 12
+  build_version: 13
 - package: links
   version: 2.30
   build_version: 1
@@ -4178,7 +4286,7 @@
   build_version: 1
   tag: rtz
 - package: llvm
-  version: 19.1.5
+  version: 19.1.6
   build_version: 1
 - package: lm_sensors
   version: 3.6.0
@@ -4193,7 +4301,7 @@
   version: 3.22.0
   build_version: 1
 - package: lokalize
-  version: 24.08.3
+  version: 24.12.0
   build_version: 1
   tag: rtz
 - package: loudmouth
@@ -4211,6 +4319,7 @@
 - package: lua
   version: 5.4.7
   build_version: 1
+  tag: SBo
 - package: luaexpat
   version: 1.5.1
   build_version: 2
@@ -4218,6 +4327,10 @@
 - package: luajit
   version: 2.1.1732813678
   build_version: 1
+- package: luarocks
+  version: 2.4.1
+  build_version: 2
+  tag: SBo
 - package: luit
   version: 1.1.1
   build_version: 5
@@ -4252,11 +4365,11 @@
   version: 0.15.2b
   build_version: 7
 - package: mailcommon
-  version: 24.08.3
+  version: 24.12.0
   build_version: 1
   tag: rtz
 - package: mailimporter
-  version: 24.08.3
+  version: 24.12.0
   build_version: 1
   tag: rtz
 - package: make
@@ -4280,7 +4393,7 @@
   version: 6.9.1
   build_version: 1
 - package: marble
-  version: 24.08.3
+  version: 24.12.0
   build_version: 1
   tag: rtz
 - package: mariadb
@@ -4328,17 +4441,17 @@
   version: 6.9
   build_version: 2
 - package: merkuro
-  version: 24.08.3
+  version: 24.12.0
   build_version: 1
   tag: rtz
 - package: mesa
-  version: 24.3.1
-  build_version: 2
+  version: 24.3.2
+  build_version: 1
 - package: meson
-  version: 1.6.0
-  build_version: 2
+  version: 1.6.1
+  build_version: 1
 - package: messagelib
-  version: 24.08.3
+  version: 24.12.0
   build_version: 1
   tag: rtz
 - package: metamail
@@ -4352,14 +4465,14 @@
   build_version: 1
   tag: rtz
 - package: mimetreeparser
-  version: 24.08.3
+  version: 24.12.0
   build_version: 1
   tag: rtz
 - package: minicom
   version: 2.9
   build_version: 1
 - package: minuet
-  version: 24.08.3
+  version: 24.12.0
   build_version: 1
   tag: rtz
 - package: mkcomposecache
@@ -4370,7 +4483,7 @@
   build_version: 1
 - package: mkinitrd
   version: 1.4.11
-  build_version: 55
+  build_version: 59
 - package: mlocate
   version: 0.26
   build_version: 4
@@ -4390,7 +4503,7 @@
   version: 2.6_alpha3
   build_version: 4
 - package: modemmanager-qt
-  version: 6.8.0
+  version: 6.9.0
   build_version: 1
   tag: rtz
 - package: mosh
@@ -4406,22 +4519,22 @@
   version: 0.6.3
   build_version: 1
 - package: mozilla-firefox
-  version: 128.5.1esr
+  version: 128.5.2esr
   build_version: 1
 - package: mozilla-nss
   version: 3.107
   build_version: 1
 - package: mozilla-thunderbird
-  version: 128.5.1esr
+  version: 128.5.2esr
   build_version: 1
 - package: mozjs128
-  version: 128.5.1esr
+  version: 128.5.2esr
   build_version: 1
 - package: mpfr
   version: 4.2.1
   build_version: 1
 - package: mpg123
-  version: 1.32.9
+  version: 1.32.10
   build_version: 1
 - package: mpv
   version: 0.39.0
@@ -4474,10 +4587,10 @@
   version: 6.5
   build_version: 1
 - package: ndctl
-  version: 79
-  build_version: 2
+  version: 80
+  build_version: 1
 - package: neochat
-  version: 24.08.3
+  version: 24.12.0
   build_version: 1
   tag: rtz
 - package: neofetch
@@ -4493,8 +4606,8 @@
   version: 20181103_0eebece
   build_version: 3
 - package: netatalk
-  version: 4.0.7
-  build_version: 2
+  version: 4.0.8
+  build_version: 1
 - package: netdate
   version: bsd4
   build_version: 4
@@ -4547,7 +4660,7 @@
   version: 15.1
   build_version: 1
 - package: networkmanager-qt
-  version: 6.8.0
+  version: 6.9.0
   build_version: 1
   tag: rtz
 - package: netwrite
@@ -4563,7 +4676,7 @@
   version: 1.0.2
   build_version: 4
 - package: nfs-utils
-  version: 2.8.1
+  version: 2.8.2
   build_version: 1
 - package: nftables
   version: 1.1.1
@@ -4572,7 +4685,7 @@
   version: 1.64.0
   build_version: 1
 - package: nghttp3
-  version: 1.6.0
+  version: 1.7.0
   build_version: 1
 - package: ninja
   version: 1.12.1
@@ -4643,7 +4756,7 @@
   build_version: 1
   tag: rtz
 - package: okular
-  version: 24.08.3
+  version: 24.12.0
   build_version: 1
   tag: rtz
 - package: olm
@@ -4665,13 +4778,6 @@
 - package: openexr
   version: 3.3.2
   build_version: 1
-- package: openjdk17
-  version: 17.0.13_11
-  build_version: 1alien
-- package: openjdk7
-  version: 7u321
-  build_version: 2
-  tag: SBo
 - package: openjpeg
   version: 2.5.3
   build_version: 1
@@ -4741,7 +4847,7 @@
   build_version: 2
   tag: SBo
 - package: oxipng
-  version: 9.1.2
+  version: 9.1.3
   build_version: 1cf
 - package: oxygen
   version: 6.2.4
@@ -4789,14 +4895,14 @@
   version: 20241122
   build_version: 1
 - package: parley
-  version: 24.08.3
+  version: 24.12.0
   build_version: 1
   tag: rtz
 - package: parted
   version: 3.6
   build_version: 1
 - package: partitionmanager
-  version: 24.08.3
+  version: 24.12.0
   build_version: 1
   tag: rtz
 - package: patch
@@ -4809,7 +4915,7 @@
   version: 6.1
   build_version: 1
 - package: pcaudiolib
-  version: 1.2
+  version: 1.3
   build_version: 1
 - package: pciutils
   version: 3.13.0
@@ -4826,6 +4932,18 @@
 - package: perl
   version: 5.40.0
   build_version: 2
+- package: perl-MIME-Charset
+  version: 1.013.1
+  build_version: 1
+  tag: SBo
+- package: perl-Module-Build
+  version: 0.4234
+  build_version: 1
+  tag: SBo
+- package: perl-YAML-Tiny
+  version: 1.74
+  build_version: 1
+  tag: SBo
 - package: phonon
   version: 4.12.0
   build_version: 1
@@ -4845,7 +4963,7 @@
   build_version: 1
   tag: rtz
 - package: php
-  version: 8.3.14
+  version: 8.3.15
   build_version: 1
 - package: pidentd
   version: 3.0.19
@@ -4856,12 +4974,16 @@
 - package: pilot-link
   version: 0.12.5
   build_version: 17
+- package: pim-data-exporter
+  version: 24.12.0
+  build_version: 1
+  tag: rtz
 - package: pim-sieve-editor
-  version: 24.08.3
+  version: 24.12.0
   build_version: 1
   tag: rtz
 - package: pimcommon
-  version: 24.08.3
+  version: 24.12.0
   build_version: 1
   tag: rtz
 - package: pinentry
@@ -4882,7 +5004,7 @@
   build_version: 5
 - package: pkgtools
   version: 15.1
-  build_version: 21
+  build_version: 22
 - package: plasma-activities
   version: 6.2.4
   build_version: 1
@@ -4967,7 +5089,7 @@
   build_version: 1
   tag: rtz
 - package: plasma-wayland-protocols
-  version: 1.14.0
+  version: 1.15.0
   build_version: 1
   tag: rtz
 - package: plasma-welcome
@@ -4987,7 +5109,7 @@
   build_version: 1
   tag: rtz
 - package: plasmatube
-  version: 24.08.3
+  version: 24.12.0
   build_version: 1
   tag: rtz
 - package: plymouth-kcm
@@ -5039,6 +5161,9 @@
 - package: postfix
   version: 3.9.1
   build_version: 1
+- package: postgresql
+  version: 17.2
+  build_version: 1cf
 - package: power-profiles-daemon
   version: 0.23
   build_version: 1
@@ -5051,7 +5176,7 @@
   version: 2.15
   build_version: 2
 - package: poxml
-  version: 24.08.3
+  version: 24.12.0
   build_version: 1
   tag: rtz
 - package: ppp
@@ -5062,7 +5187,7 @@
   build_version: 1
   tag: rtz
 - package: prison
-  version: 6.8.0
+  version: 6.9.0
   build_version: 1
   tag: rtz
 - package: prison5
@@ -5076,14 +5201,14 @@
   version: 4.0.4
   build_version: 2
 - package: proftpd
-  version: 1.3.8b
-  build_version: 4
+  version: 1.3.8c
+  build_version: 1
 - package: projectM
   version: 4.1.2
   build_version: 1
   tag: SBo
 - package: protobuf
-  version: 29.1
+  version: 29.2
   build_version: 1
 - package: pssh
   version: 2.3.5
@@ -5096,7 +5221,7 @@
   build_version: 1
   tag: rtz
 - package: purpose
-  version: 6.8.0
+  version: 6.9.0
   build_version: 1
   tag: rtz
 - package: purpose5
@@ -5114,8 +5239,8 @@
   version: 2.0.4
   build_version: 2
 - package: pycurl
-  version: 7.45.3
-  build_version: 3
+  version: 7.45.4
+  build_version: 1
 - package: pygdbmi
   version: 0.11.0.0
   build_version: 1
@@ -5157,8 +5282,8 @@
   version: 2022.6.26
   build_version: 3
 - package: python-certifi
-  version: 2024.8.30
-  build_version: 2
+  version: 2024.12.14
+  build_version: 1
 - package: python-cffi
   version: 1.17.1
   build_version: 2
@@ -5199,8 +5324,8 @@
   version: 0.4.0
   build_version: 2
 - package: python-hatchling
-  version: 1.26.3
-  build_version: 2
+  version: 1.27.0
+  build_version: 1
 - package: python-html5lib
   version: 1.1
   build_version: 3
@@ -5307,6 +5432,9 @@
 - package: python-urllib3
   version: 2.2.3
   build_version: 2
+- package: python-versioneer
+  version: 0.29
+  build_version: 1
 - package: python-webencodings
   version: 0.5.1
   build_version: 3
@@ -5337,6 +5465,10 @@
   version: 3.5.3
   build_version: 1
   tag: SBo
+- package: python3-pywayland
+  version: 0.4.14
+  build_version: 1
+  tag: SBo
 - package: python3-tomlkit
   version: 0.13.2
   build_version: 1
@@ -5345,6 +5477,10 @@
   version: 6.0.0
   build_version: 1
   tag: rtz
+- package: python3-xkbcommon
+  version: 1.0.1
+  build_version: 1
+  tag: SBo
 - package: pyxdg
   version: 0.28
   build_version: 3
@@ -5357,7 +5493,7 @@
   build_version: 1
   tag: rtz
 - package: qmlkonsole
-  version: 24.08.3
+  version: 24.12.0
   build_version: 1
   tag: rtz
 - package: qpdf
@@ -5368,7 +5504,7 @@
   build_version: 1
   tag: rtz
 - package: qqc2-desktop-style
-  version: 6.8.0
+  version: 6.9.0
   build_version: 1
   tag: rtz
 - package: qrca
@@ -5390,9 +5526,9 @@
   build_version: 1
 - package: qtkeychain
   version: 0.14.3
-  build_version: 1
-- package: qtkeychain-qt6
-  version: 0.14.3
+  build_version: 3
+- package: qtscrcpy
+  version: d444f26_git.dev
   build_version: 1
   tag: rtz
 - package: quazip
@@ -5425,7 +5561,7 @@
   version: 6.1.5
   build_version: 5
 - package: re2c
-  version: 4.0.1
+  version: 4.0.2
   build_version: 1
 - package: readline
   version: 8.2.013
@@ -5455,7 +5591,7 @@
   build_version: 1
   tag: rtz
 - package: rocs
-  version: 24.08.3
+  version: 24.12.0
   build_version: 1
   tag: rtz
 - package: rp-pppoe
@@ -5489,11 +5625,15 @@
 - package: rubygem-asciidoctor
   version: 2.0.20
   build_version: 1
+- package: run-virt-x
+  version: 0.0.1_RC
+  build_version: 1
+  tag: rtz
 - package: runc
   version: 1.1.13
   build_version: 1alien
 - package: ruqola
-  version: 2.3.1
+  version: 2.4.0
   build_version: 1
   tag: rtz
 - package: rust
@@ -5552,10 +5692,14 @@
   build_version: 2
 - package: scour
   version: 0.38.2
-  build_version: 5cf
+  build_version: 6cf
 - package: screen
   version: 5.0.0
   build_version: 1
+- package: scrot
+  version: 1.10
+  build_version: 1
+  tag: SBo
 - package: sddm
   version: 0.21.0
   build_version: 1
@@ -5572,6 +5716,9 @@
   build_version: 3
 - package: seamonkey
   version: 2.53.19
+  build_version: 1
+- package: seatd
+  version: 0.9.1
   build_version: 1
 - package: sed
   version: 4.9
@@ -5624,10 +5771,10 @@
   version: 20060929
   build_version: 5
 - package: sip
-  version: 6.9.0
+  version: 6.9.1
   build_version: 1
 - package: skanlite
-  version: 24.08.3
+  version: 24.12.0
   build_version: 1
   tag: rtz
 - package: skia-sharp
@@ -5658,7 +5805,7 @@
   version: 1.4.9
   build_version: 4
 - package: slpkg
-  version: 5.1.5
+  version: 5.1.6
   build_version: 1
   tag: SBo
 - package: slrn
@@ -5691,13 +5838,13 @@
   build_version: 1
   tag: rtz
 - package: socat
-  version: 1.8.0.1
+  version: 1.8.0.2
   build_version: 1
 - package: sof-firmware
   version: 2024.09.2
   build_version: 1
 - package: solid
-  version: 6.8.0
+  version: 6.9.0
   build_version: 1
   tag: rtz
 - package: solid5
@@ -5708,7 +5855,7 @@
   version: 3.3.7
   build_version: 3
 - package: sonnet
-  version: 6.8.0
+  version: 6.9.0
   build_version: 1
   tag: rtz
 - package: sonnet5
@@ -5729,8 +5876,12 @@
   version: 6.2.4
   build_version: 1
   tag: rtz
+- package: spandsp
+  version: 0.0.6_0d2e6a
+  build_version: 1
+  tag: SBo
 - package: spectacle
-  version: 24.08.3
+  version: 24.12.0
   build_version: 1
   tag: rtz
 - package: speech-dispatcher
@@ -5748,6 +5899,10 @@
 - package: splitvt
   version: 1.6.6
   build_version: 5
+- package: sqlcipher
+  version: 4.4.2
+  build_version: 2
+  tag: SBo
 - package: sqlite
   version: 3.46.1
   build_version: 2
@@ -5768,7 +5923,7 @@
   version: 0.12
   build_version: 5
 - package: step
-  version: 24.08.3
+  version: 24.12.0
   build_version: 1
   tag: rtz
 - package: stow
@@ -5778,7 +5933,7 @@
   version: 6.12
   build_version: 1
 - package: stunnel
-  version: 5.73
+  version: 5.74
   build_version: 1
 - package: subtitlecomposer
   version: 0.8.0
@@ -5798,7 +5953,7 @@
   version: 1.9.25
   build_version: 7
 - package: svgpart
-  version: 24.08.3
+  version: 24.12.0
   build_version: 1
   tag: rtz
 - package: svt-av1
@@ -5806,7 +5961,7 @@
   build_version: 1
   tag: SBo
 - package: sweeper
-  version: 24.08.3
+  version: 24.12.0
   build_version: 1
   tag: rtz
 - package: swig
@@ -5817,7 +5972,7 @@
   build_version: 1
   tag: rtz
 - package: syndication
-  version: 6.8.0
+  version: 6.9.0
   build_version: 1
   tag: rtz
 - package: syndication5
@@ -5825,7 +5980,7 @@
   build_version: 1
   tag: rtz
 - package: syntax-highlighting
-  version: 6.8.0
+  version: 6.9.0
   build_version: 1
   tag: rtz
 - package: syntax-highlighting5
@@ -5909,7 +6064,7 @@
   build_version: 1
   tag: rtz
 - package: telly-skout
-  version: 24.08.3
+  version: 24.12.0
   build_version: 1
   tag: rtz
 - package: telnet
@@ -5931,7 +6086,7 @@
   version: 5.2
   build_version: 9
 - package: threadweaver
-  version: 6.8.0
+  version: 6.9.0
   build_version: 1
   tag: rtz
 - package: threadweaver5
@@ -5939,10 +6094,10 @@
   build_version: 1
   tag: rtz
 - package: thunar
-  version: 4.18.11
+  version: 4.20.0
   build_version: 1
 - package: thunar-volman
-  version: 4.18.0
+  version: 4.20.0
   build_version: 1
 - package: tibmachuni-font-ttf
   version: 1.901b
@@ -5957,6 +6112,10 @@
 - package: time
   version: 1.9
   build_version: 4
+- package: timewall
+  version: 1.3.0
+  build_version: 1
+  tag: rtz
 - package: tin
   version: 2.6.3
   build_version: 2
@@ -5970,9 +6129,12 @@
   version: 3.5a
   build_version: 1
 - package: tokodon
-  version: 24.08.3
+  version: 24.12.0
   build_version: 1
   tag: rtz
+- package: tokyocabinet
+  version: 1.4.48
+  build_version: 2cf
 - package: totem-pl-parser
   version: 3.26.6
   build_version: 4
@@ -5996,7 +6158,7 @@
   version: 0.7.3
   build_version: 2
 - package: tumbler
-  version: 4.18.2
+  version: 4.20.0
   build_version: 1
 - package: turbo-attack
   version: 0.1.0
@@ -6021,9 +6183,17 @@
 - package: unarj
   version: 265
   build_version: 4
+- package: unciv
+  version: 4.14.17
+  build_version: 1
+  tag: rtz
 - package: undervolt
   version: 0.4.0
   build_version: 2
+- package: unicode-character-database
+  version: 16.0.0
+  build_version: 1
+  tag: SBo
 - package: unicode-ucd
   version: 16.0.0
   build_version: 1
@@ -6068,9 +6238,13 @@
   version: 1.28.1
   build_version: 1
 - package: v4l2loopback
-  version: 0.13.2_6.12.1
+  version: 0.13.2_6.12.5
   build_version: 1
   tag: SBo
+- package: vail
+  version: a6fbad92_git
+  build_version: 1
+  tag: rtz
 - package: vakzination
   version: 23.01.0_git20231212
   build_version: 1
@@ -6113,7 +6287,7 @@
   version: 1.4.2
   build_version: 4
 - package: vscode-bin
-  version: 1.95.3
+  version: 1.96.0
   build_version: 1
   tag: SBo
 - package: vsftpd
@@ -6131,6 +6305,10 @@
   build_version: 2
 - package: wacomtablet
   version: 6.2.4
+  build_version: 1
+  tag: rtz
+- package: washipad
+  version: 54ee2fba_git
   build_version: 1
   tag: rtz
 - package: wavpack
@@ -6189,6 +6367,10 @@
 - package: wireplumber
   version: 0.5.7
   build_version: 1
+- package: wlroots
+  version: 0.18.2
+  build_version: 1
+  tag: SBo
 - package: woff2
   version: 20231106_0f4d304
   build_version: 2
@@ -6201,8 +6383,8 @@
   build_version: 2
 - package: wpebackend-fdo
   version: 1.14.2
-  build_version: 1
-  tag: SBo
+  build_version: 3
+  tag: gfs
 - package: wqy-zenhei-font-ttf
   version: 0.8.38_1
   build_version: 10
@@ -6223,11 +6405,11 @@
   build_version: 1
   tag: SBo
 - package: x265
-  version: 3.6
+  version: 4.1
   build_version: 1
   tag: SBo
 - package: x3270
-  version: 4.3ga9
+  version: 4.3ga10
   build_version: 1
 - package: xaos
   version: 4.3.3
@@ -6305,16 +6487,16 @@
   version: 1.1.0
   build_version: 5
 - package: xdg-dbus-proxy
-  version: 0.1.6
-  build_version: 1
-  tag: rtz
+  version: 0.1.5
+  build_version: 2
+  tag: gfs
 - package: xdg-desktop-portal
   version: 1.18.4
   build_version: 1
 - package: xdg-desktop-portal-gtk
-  version: 1.15.1
-  build_version: 1
-  tag: rtz
+  version: 1.4.0
+  build_version: 2
+  tag: SBo
 - package: xdg-desktop-portal-kde
   version: 6.2.4
   build_version: 1
@@ -6410,26 +6592,26 @@
   version: 1.0.3
   build_version: 5
 - package: xfce4-appfinder
-  version: 4.18.1
+  version: 4.20.0
   build_version: 1
 - package: xfce4-clipman-plugin
   version: 1.6.6
-  build_version: 1
+  build_version: 2
 - package: xfce4-dev-tools
-  version: 4.18.1
+  version: 4.20.0
   build_version: 1
 - package: xfce4-notifyd
   version: 0.9.6
-  build_version: 1
+  build_version: 2
 - package: xfce4-panel
-  version: 4.18.6
-  build_version: 1
+  version: 4.20.0
+  build_version: 2
 - package: xfce4-panel-profiles
   version: 1.0.14
   build_version: 1
 - package: xfce4-power-manager
-  version: 4.18.4
-  build_version: 1
+  version: 4.20.0
+  build_version: 2
 - package: xfce4-pulseaudio-plugin
   version: 0.4.9
   build_version: 1
@@ -6438,13 +6620,13 @@
   build_version: 2
 - package: xfce4-screenshooter
   version: 1.11.1
-  build_version: 1
+  build_version: 2
 - package: xfce4-session
-  version: 4.18.4
-  build_version: 1
+  version: 4.20.0
+  build_version: 2
 - package: xfce4-settings
-  version: 4.18.6
-  build_version: 1
+  version: 4.20.0
+  build_version: 2
 - package: xfce4-systemload-plugin
   version: 1.3.2
   build_version: 1
@@ -6453,25 +6635,25 @@
   build_version: 1
 - package: xfce4-terminal
   version: 1.1.3
-  build_version: 1
+  build_version: 2
 - package: xfce4-weather-plugin
   version: 0.11.3
   build_version: 1
 - package: xfce4-whiskermenu-plugin
   version: 2.8.3
-  build_version: 1
+  build_version: 2
 - package: xfce4-xkb-plugin
   version: 0.8.3
   build_version: 1
 - package: xfconf
-  version: 4.18.3
+  version: 4.20.0
   build_version: 1
 - package: xfd
   version: 1.1.4
   build_version: 1
 - package: xfdesktop
-  version: 4.18.1
-  build_version: 1
+  version: 4.20.0
+  build_version: 2
 - package: xfig
   version: 3.2.9
   build_version: 2
@@ -6491,7 +6673,7 @@
   version: 6.12.0
   build_version: 1
 - package: xfwm4
-  version: 4.18.0
+  version: 4.20.0
   build_version: 1
 - package: xgames
   version: 0.3
@@ -6590,16 +6772,16 @@
   version: 1.7.3
   build_version: 1
 - package: xorg-server
-  version: 21.1.14
+  version: 21.1.15
   build_version: 1
 - package: xorg-server-xephyr
-  version: 21.1.14
+  version: 21.1.15
   build_version: 1
 - package: xorg-server-xnest
-  version: 21.1.14
+  version: 21.1.15
   build_version: 1
 - package: xorg-server-xvfb
-  version: 21.1.14
+  version: 21.1.15
   build_version: 1
 - package: xorg-server-xwayland
   version: 24.1.4
@@ -6653,8 +6835,8 @@
   version: 1.0.6
   build_version: 1
 - package: xsnow
-  version: 3.7.9
-  build_version: 2
+  version: 3.8.1
+  build_version: 1
 - package: xstdcmap
   version: 1.0.5
   build_version: 1
@@ -6698,7 +6880,7 @@
   version: 5.6.3
   build_version: 1
 - package: yakuake
-  version: 24.08.3
+  version: 24.12.0
   build_version: 1
   tag: rtz
 - package: yasm
@@ -6708,7 +6890,7 @@
   version: 4.2.3
   build_version: 6
 - package: yq
-  version: 4.44.2
+  version: 4.44.6
   build_version: 1
   tag: SBo
 - package: yt-dlp
@@ -6719,7 +6901,7 @@
   version: 3.3.0
   build_version: 7
 - package: zanshin
-  version: 24.08.3
+  version: 24.12.0
   build_version: 1
   tag: rtz
 - package: zd1211-firmware
@@ -6728,6 +6910,14 @@
 - package: zerofree
   version: 1.1.1
   build_version: 3
+- package: zita-resampler
+  version: 1.11.2
+  build_version: 1
+  tag: SBo
+- package: zita-rev1
+  version: 0.2.2
+  build_version: 2
+  tag: SBo
 - package: zlib
   version: 1.3.1
   build_version: 1
@@ -6758,6 +6948,10 @@
 - package: zxing-cpp
   version: 2.2.1
   build_version: 1
+- package: zziplib
+  version: 0.13.78
+  build_version: 3
+  tag: SBo
 - package: Martin Abente Lahaye
   version: 2.3.0
   build_version: 1
