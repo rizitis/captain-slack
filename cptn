@@ -173,14 +173,15 @@ case "$command" in
         source "$APP_SERV/islib_installed.sh" "$package"
         source "$APP_SERV/ispkg_installed.sh" "$package"
         source "$APP_SERV/print_bins.sh" "$package"
+        grep --color=always -rwF "$package" "$APP_SERV"/permissions_report.txt
         ;;
 
     serv-status)
     # Check if the script is being run as root
-if [ "$EUID" -ne 0 ]; then
-    echo "Please run as root!"
-    exit 1
-fi
+    if [ "$EUID" -ne 0 ]; then
+        echo "Please run as root!"
+        exit 1
+    fi
        package=$1
        if [ -z "$package" ]; then
             echo "Error: 'serv-status' command requires a rc.serv_name"
@@ -205,6 +206,7 @@ fi
             execute_command "bash $APP_SERV/validate-tags.sh"
             execute_command "bash $APP_SERV/ldd-explorer.sh"
             execute_command "bash $APP_SERV/create_libs_yaml.sh"
+            find /bin /sbin /usr/bin /usr/sbin /usr/local/bin /opt -type f -exec ls -l {} \; > $APP_SERV/permissions_report.txt
         elif
             [ "$flag_p" = true ]; then
         echo "Creating DataBase for all installed Packages"
@@ -213,6 +215,7 @@ fi
             execute_command "bash $APP_SERV/create_db.sh"
             execute_command "bash $APP_SERV/export-tags.sh"
             execute_command "bash $APP_SERV/validate-tags.sh"
+            find /bin /sbin /usr/bin /usr/sbin /usr/local/bin /opt -type f -exec ls -l {} \; > $APP_SERV/permissions_report.txt
         elif
             [ "$flag_l" = true ]; then
         echo "Creating DataBase for all installed Libraries"
@@ -227,6 +230,7 @@ fi
             execute_command "bash $APP_SERV/validate-tags.sh"
             execute_command "bash $APP_SERV/ldd-explorer.sh"
             execute_command "bash $APP_SERV/create_libs_yaml.sh"
+            find /bin /sbin /usr/bin /usr/sbin /usr/local/bin /opt -type f -exec ls -l {} \; > $APP_SERV/permissions_report.txt
         else
         echo "Error: Invalid command: $command"
         echo "Usage: $0 make-db [-a] [-p] [-l]"

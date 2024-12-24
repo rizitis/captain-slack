@@ -24,7 +24,7 @@
 cd $(dirname $0) ; CWD=$(pwd)
 
 PRGNAM=cptn
-VERSION=${VERSION:-2.2.0}
+VERSION=${VERSION:-2.3.1}
 BUILD=${BUILD:-1}
 TAG=${TAG:-_rtz}
 PKGTYPE=${PKGTYPE:-tlz}
@@ -61,17 +61,17 @@ chmod +x "$PKG"/usr/local/bin/captain-slack/*.sh
 mkdir -p "$PKG"/install
 cat <<EOL > "$PKG"/install/slack-desc
     |-----handy-ruler------------------------------------------------------|
-cptn: cptn (Captain-Slack script collection for Slackware)
+cptn: cptn (Captain-Slack scripts collection for Slackware systems)
 cptn:
 cptn: Captain-Slack is a collection of scripts helping users maintain a
 cptn: Slackware system.
 cptn: It create Packages and Libraries database in yaml format,
-cptn: print which services running and theirs status etc...
-cptn: It also print infos about installed packages libs theirs TAGS and
+cptn: print which services running and theirs status and more...
+cptn: It also print infos about installed packages, libs, their, TAGS and
 cptn: finally print weather infos in terminal.
 cptn:
 cptn: Captain-Slack (cptn)
-cptn:
+cptn: https://github.com/rizitis/captain-slack
 EOL
 
 mkdir -p "$PKG"/usr/doc/"$PRGNAM-$VERSION"
