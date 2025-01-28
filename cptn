@@ -210,9 +210,9 @@ case "$command" in
             find /bin /sbin /usr/bin /usr/sbin /usr/local/bin /opt -type f -exec ls -l {} \; > $APP_SERV/permissions_report.txt
         elif
             [ "$flag_p" = true ]; then
-        echo "Creating DataBase for all installed Packages, it ldd executables in $PATH but not for Libraries."
+        echo "Creating DataBase for all installed Packages in $PATH but not for Libraries."
             sleep 2
-            execute_command "bash $APP_SERV/find_bins.sh"
+#            execute_command "bash $APP_SERV/find_bins.sh"
             execute_command "bash $APP_SERV/export-installed.sh"
             execute_command "bash $APP_SERV/create_db.sh"
             execute_command "bash $APP_SERV/export-tags.sh"

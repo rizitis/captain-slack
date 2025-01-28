@@ -11,6 +11,9 @@ SCRIPTS := *.sh
 MAIN_INI := cptn-main.ini
 EXEC := cptn
 
+# CONF NEW
+MAIN_INI_NEW := cptn-main.ini.new
+
 # Default target to build and install everything
 all: install
 
@@ -20,7 +23,7 @@ create_dirs:
 
 # Install the files
 install: create_dirs
-	@cp $(MAIN_INI) $(ETC_DIR)/
+	@cp $(MAIN_INI) $(ETC_DIR)/$(MAIN_INI_NEW)
 	@cp $(EXEC) $(BIN_DIR)/
 	@chmod +x $(BIN_DIR)/$(EXEC)
 	@cp $(SCRIPTS) $(BIN_DIR)/captain-slack/
