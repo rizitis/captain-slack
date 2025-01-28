@@ -1,8 +1,8 @@
 #!/bin/bash
 
-# This is Captain Slack 
+# This is Captain Slack
 # Born in: https://github.com/rizitis/captain-slack 20/10/2024 first from a Human Brain with help of ChatGPT
-# 
+#
 # This is free and unencumbered software released into the public domain.
 
 # Anyone is free to copy, modify, publish, use, compile, sell, or
@@ -43,13 +43,13 @@ echo -e "\e[1;34m"
 cat << "EOF"
 
 
-!   ▗▄▄▖▗▞▀▜▌▄▄▄▄     ■  ▗▞▀▜▌▄ ▄▄▄▄       ▗▄▄▖█ ▗▞▀▜▌▗▞▀▘█  ▄     
-!  ▐▌   ▝▚▄▟▌█   █ ▗▄▟▙▄▖▝▚▄▟▌▄ █   █     ▐▌   █ ▝▚▄▟▌▝▚▄▖█▄▀      
-!  ▐▌        █▄▄▄▀   ▐▌       █ █   █      ▝▀▚▖█          █ ▀▄     
-!  ▝▚▄▄▖     █       ▐▌       █           ▗▄▄▞▘█          █  █     
-!            ▀       ▐▌                                            
-!                                                                  
-!                                                                  
+!   ▗▄▄▖▗▞▀▜▌▄▄▄▄     ■  ▗▞▀▜▌▄ ▄▄▄▄       ▗▄▄▖█ ▗▞▀▜▌▗▞▀▘█  ▄
+!  ▐▌   ▝▚▄▟▌█   █ ▗▄▟▙▄▖▝▚▄▟▌▄ █   █     ▐▌   █ ▝▚▄▟▌▝▚▄▖█▄▀
+!  ▐▌        █▄▄▄▀   ▐▌       █ █   █      ▝▀▚▖█          █ ▀▄
+!  ▝▚▄▄▖     █       ▐▌       █           ▗▄▄▞▘█          █  █
+!            ▀       ▐▌
+!
+!
 
 EOF
 echo -e "\e[0m"
@@ -71,7 +71,7 @@ function source_config() {
             value=$(echo "$value" | xargs)  # Trim whitespace
             value=$(eval echo "$value")  # Resolve variables like $APP_HOME
             export "$key"="$value"  # Export as environment variable
-            #echo "$key = $value"  # Automatically echo the key-value pair for testing not need in real.. 
+            #echo "$key = $value"  # Automatically echo the key-value pair for testing not need in real..
         fi
     done < "$CONFIG_FILE"
 }
@@ -89,11 +89,52 @@ execute_command() {
     eval "$1"
 }
 
+
 # Check if at least one argument is provided
 if [ "$#" -lt 1 ]; then
     echo "Usage: $0 <command> [<package>] [-a] [-p] [-l] [-v] [-1] [-2] ... [-9]"
-    echo "Commands: mirrors, show-servs, restart-serv, serv-status, make-db, info, weather, open-pkgs, open-libs, open-logs, clear-logs"
+    echo "Commands: mirrors, show-servs, restart-serv, serv-status, make-db, info, weather, open-pkgs, open-libs, open-logs, clear-logs, help"
     exit 1
+fi
+
+# Help functionality
+if [[ "$1" == "-h" || "$1" == "help" || "$1" == "--help" ]]; then
+    echo "Usage: cptn [options] <command>"
+    echo ""
+    echo "Options:"
+    echo "  -h, --help          Show this help message"
+    echo "  -v, --version       Show the version of Captain-Slack"
+    echo ""
+    echo "Commands:"
+    echo "  make-db             Create a database for installed packages and libraries"
+    echo "    -a                Create full database (all packages and libraries)"
+    echo "    -p                Create database for packages only"
+    echo "    -l                Create database for libraries and their dependencies"
+    echo "    -v                Create full database packages, libraries and ldd all binaries (need 20 minutes)"
+    echo ""
+    echo "  info <package-name> Print information about a package or library"
+    echo "  open-libs           Open the installed libraries YAML file in the default text editor"
+    echo "  open-pkgs           Open the installed packages YAML file in the default text editor"
+    echo "  open-logs           Open the Captain-Slack log directory (/var/log/captain-slack)"
+    echo "  clear-logs          Delete all log files in the Captain-Slack log directory"
+    echo ""
+    echo "  serv-status <service-name>  Show the status of a specific service"
+    echo "  restart-serv        Restart a selected service"
+    echo "  show-servs          Show the status of all services"
+    echo ""
+    echo "  mirrors             Check and list fast mirrors for Slackware based on your location"
+    echo "    -1                Show only the fastest mirror"
+    echo "    -[1..9]           Show top N fastest mirrors (default is top 5)"
+    echo ""
+    echo "  weather             Display weather forecast for your location"
+    echo ""
+    echo "Examples:"
+    echo "  cptn make-db -a          # Create a full database of installed packages and libraries"
+    echo "  cptn info vim             # Display information about the vim package"
+    echo "  cptn serv-status apache   # Show the status of the apache service"
+    echo "  cptn mirrors -1           # Show the fastest mirror"
+    echo "  cptn weather              # Display weather forecast for your location"
+    exit 0
 fi
 
 
@@ -119,7 +160,7 @@ if [[ "$1" != -* && "$1" != "" && "$command" != "mirrors" && "$command" != "show
     shift
 fi
 
-# Parse optional flags: -a, -b, -v for non slack-package managers. I mean not needed for cptn exaclty but maybe in future... 
+# Parse optional flags: -a, -b, -v for non slack-package managers. I mean not needed for cptn exaclty but maybe in future...
 while getopts "aplv123456789" opt; do
     case ${opt} in
         a )
@@ -241,11 +282,11 @@ case "$command" in
         exit 1
         fi
         ;;
-        
+
     weather)
         execute_command "curl wttr.in"
         ;;
-        
+
     restart-serv)
     # Check if the script is being run as root
     if [ "$EUID" -ne 0 ]; then
@@ -254,7 +295,7 @@ case "$command" in
     fi
         execute_command "bash $APP_SERV/restart-services.sh"
         ;;
-        
+
     show-servs)
     # Check if the script is being run as root
     if [ "$EUID" -ne 0 ]; then
@@ -263,7 +304,7 @@ case "$command" in
     fi
         execute_command "bash $APP_SERV/rcstatus.sh"
         ;;
-        
+
     mirrors)
     # Check if the script is being run as root
     if [ "$EUID" -ne 0 ]; then
@@ -301,11 +342,11 @@ case "$command" in
             rm "$CPTN_LOGS"/*.log || exit
             echo "Success. Clear all log files from $CPTN_LOGS"
         ;;
-        
+
     *)
         echo "Invalid command: $command"
         echo "Usage: cptn <command> [<package>] [-a] [-p] [-l] [-v] [-1] [-2] ... [-9]"
-        echo "Commands: mirrors, show-servs, restart-serv, serv-status, make-db, info, weather, open-pkgs, open-libs, first-run, open-logs, clear-logs"
+        echo "Commands: mirrors, show-servs, restart-serv, serv-status, make-db, info, weather, open-pkgs, open-libs, first-run, open-logs, clear-logs, help"
         exit 1
         ;;
 esac
