@@ -101,8 +101,8 @@ To find and use fast mirrors as for your location from mirrorlist:<p>
 ![AthOS](./athos.png)
 
 *update*:<br>
-After [conraid](https://github.com/conraid/SlackBuilds/issues/37) suggestions I made some changes. Now `cptn info` command will read also his build as we both storing a slack-required file in `/usr/doc/$PRGNAM-$VERSION/` folder and things are more easy and more proper discribed ;)<br>
-If you also have local builds is a good choice to include a slack-required file in the same folder.<br>
+~~After [conraid](https://github.com/conraid/SlackBuilds/issues/37) suggestions I made some changes. Now `cptn info` command will read also his build as we both storing a slack-required file in `/usr/doc/$PRGNAM-$VERSION/` folder and things are more easy and more proper discribed ;)<br>
+If you also have local builds is a good choice to include a slack-required file in the same folder.~~<br>
 - *slack-required* format is:
 ```
 foo
